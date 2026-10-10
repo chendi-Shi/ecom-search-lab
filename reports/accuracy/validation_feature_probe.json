@@ -1,0 +1,432 @@
+{
+  "baseline_validation": {
+    "bm25": {
+      "exact_at1": 0.645,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.6990507435840293,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8115000000000007,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.2957324782282631,
+      "recall10_denominator": 200
+    },
+    "cross_encoder": {
+      "exact_at1": 0.72,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.7348772841828386,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8290000000000007,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.3078429866658696,
+      "recall10_denominator": 200
+    },
+    "selected": {
+      "exact_at1": 0.745,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.7426062185604223,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8290000000000007,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.30213978783776835,
+      "recall10_denominator": 200
+    },
+    "transferred_pairwise": {
+      "exact_at1": 0.73,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.7242851571449055,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8160000000000005,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.29479618347106257,
+      "recall10_denominator": 200
+    }
+  },
+  "best_per_family": {
+    "A": {
+      "exact_at1": 0.78,
+      "family": "A",
+      "feature_importance_gain": {
+        "bigram_match": 31.685557186603546,
+        "brand_conflict": 8.218516111373901,
+        "brand_match": 1.460279941558838,
+        "ce_query_percentile": 437.00008833408356,
+        "ce_query_zscore": 2261.8985670804977,
+        "char_trigram_similarity": 551.5791518092155,
+        "cross_encoder_logit": 701.6718443334103,
+        "description_token_coverage": 0.0,
+        "negation_conflict": 608.9836186766624,
+        "negation_satisfied": 7.010596990585327,
+        "number_conflict": 69.31575232744217,
+        "number_match": 7.9045470058918,
+        "phrase_match": 3.325850009918213,
+        "title_bm25": 297.2424220442772,
+        "title_token_coverage": 219.97101604938507
+      },
+      "feature_importance_split": {
+        "bigram_match": 17,
+        "brand_conflict": 4,
+        "brand_match": 1,
+        "ce_query_percentile": 165,
+        "ce_query_zscore": 234,
+        "char_trigram_similarity": 202,
+        "cross_encoder_logit": 220,
+        "description_token_coverage": 0,
+        "negation_conflict": 120,
+        "negation_satisfied": 5,
+        "number_conflict": 32,
+        "number_match": 12,
+        "phrase_match": 2,
+        "title_bm25": 139,
+        "title_token_coverage": 47
+      },
+      "feature_names": [
+        "title_bm25",
+        "title_token_coverage",
+        "description_token_coverage",
+        "char_trigram_similarity",
+        "brand_match",
+        "brand_conflict",
+        "number_match",
+        "number_conflict",
+        "bigram_match",
+        "phrase_match",
+        "negation_conflict",
+        "negation_satisfied",
+        "cross_encoder_logit",
+        "ce_query_percentile",
+        "ce_query_zscore"
+      ],
+      "iterations": 200,
+      "leaves": 7,
+      "ndcg10": 0.7481695976672633,
+      "ndcg10_denominator": 200,
+      "params": {
+        "deterministic": true,
+        "feature_pre_filter": false,
+        "force_col_wise": true,
+        "label_gain": [
+          0,
+          1,
+          3,
+          7
+        ],
+        "lambda_l2": 1,
+        "learning_rate": 0.05,
+        "metric": "ndcg",
+        "min_data_in_leaf": 40,
+        "ndcg_eval_at": [
+          10
+        ],
+        "num_leaves": 7,
+        "num_threads": 2,
+        "objective": "lambdarank",
+        "seed": 20261010,
+        "verbosity": -1
+      },
+      "precision10": 0.8300000000000007,
+      "queries": 200
+    },
+    "B": {
+      "exact_at1": 0.775,
+      "family": "B",
+      "feature_importance_gain": {
+        "bigram_match": 45.87813514471054,
+        "brand_conflict": 4.88838005065918,
+        "brand_match": 7.982270002365112,
+        "ce_query_percentile": 385.4930661916733,
+        "ce_query_zscore": 1928.2485299110413,
+        "char_trigram_similarity": 288.62503546476364,
+        "cross_encoder_logit": 583.1605361998081,
+        "description_token_coverage": 0.0,
+        "negation_conflict": 374.89265137910843,
+        "negation_satisfied": 0.0,
+        "number_conflict": 28.84948205947876,
+        "number_match": 1.3907699584960938,
+        "old_pairwise_score": 1412.8128942847252,
+        "phrase_match": 0.0,
+        "query_token_count": 29.227522611618042,
+        "title_bm25": 203.20374804735184,
+        "title_token_coverage": 87.87792539596558
+      },
+      "feature_importance_split": {
+        "bigram_match": 28,
+        "brand_conflict": 3,
+        "brand_match": 5,
+        "ce_query_percentile": 147,
+        "ce_query_zscore": 195,
+        "char_trigram_similarity": 142,
+        "cross_encoder_logit": 192,
+        "description_token_coverage": 0,
+        "negation_conflict": 82,
+        "negation_satisfied": 0,
+        "number_conflict": 17,
+        "number_match": 1,
+        "old_pairwise_score": 218,
+        "phrase_match": 0,
+        "query_token_count": 20,
+        "title_bm25": 113,
+        "title_token_coverage": 37
+      },
+      "feature_names": [
+        "title_bm25",
+        "title_token_coverage",
+        "description_token_coverage",
+        "char_trigram_similarity",
+        "brand_match",
+        "brand_conflict",
+        "number_match",
+        "number_conflict",
+        "bigram_match",
+        "phrase_match",
+        "negation_conflict",
+        "negation_satisfied",
+        "cross_encoder_logit",
+        "ce_query_percentile",
+        "ce_query_zscore",
+        "old_pairwise_score",
+        "query_token_count"
+      ],
+      "iterations": 200,
+      "leaves": 7,
+      "ndcg10": 0.7464170786973976,
+      "ndcg10_denominator": 200,
+      "params": {
+        "deterministic": true,
+        "feature_pre_filter": false,
+        "force_col_wise": true,
+        "label_gain": [
+          0,
+          1,
+          3,
+          7
+        ],
+        "lambda_l2": 1,
+        "learning_rate": 0.05,
+        "metric": "ndcg",
+        "min_data_in_leaf": 40,
+        "ndcg_eval_at": [
+          10
+        ],
+        "num_leaves": 7,
+        "num_threads": 2,
+        "objective": "lambdarank",
+        "seed": 20261010,
+        "verbosity": -1
+      },
+      "precision10": 0.8280000000000008,
+      "queries": 200
+    }
+  },
+  "best_spec": {
+    "family": "A",
+    "iterations": 200,
+    "leaves": 7
+  },
+  "created_at": "2026-10-09T10:28:34.590205+00:00",
+  "duration_seconds": 9.393905299999915,
+  "feature_definitions": {
+    "A": "13 original features + within-query tied-average percentile of CE logit in [0,1] + CE logit population z-score (zero for constant groups)",
+    "B": "A + original 12 features dot frozen old pairwise weights + len(query.split())",
+    "candidate_dependency": "Relative features depend on the complete candidate group; production pools may have different distributions."
+  },
+  "grid": [
+    {
+      "exact_at1": 0.745,
+      "family": "A",
+      "iterations": 50,
+      "leaves": 7,
+      "ndcg10": 0.7440271064114471,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8345000000000005,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.735,
+      "family": "A",
+      "iterations": 100,
+      "leaves": 7,
+      "ndcg10": 0.74216598212437,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8315000000000005,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.78,
+      "family": "A",
+      "iterations": 200,
+      "leaves": 7,
+      "ndcg10": 0.7481695976672633,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8300000000000007,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.755,
+      "family": "A",
+      "iterations": 400,
+      "leaves": 7,
+      "ndcg10": 0.7419127796923851,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8260000000000006,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.74,
+      "family": "A",
+      "iterations": 50,
+      "leaves": 15,
+      "ndcg10": 0.744353227322145,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8365000000000006,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.74,
+      "family": "A",
+      "iterations": 100,
+      "leaves": 15,
+      "ndcg10": 0.7454900470677484,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8370000000000006,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.755,
+      "family": "A",
+      "iterations": 200,
+      "leaves": 15,
+      "ndcg10": 0.7450097274273105,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8345000000000007,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.76,
+      "family": "A",
+      "iterations": 400,
+      "leaves": 15,
+      "ndcg10": 0.7393466975145874,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8215000000000005,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.73,
+      "family": "B",
+      "iterations": 50,
+      "leaves": 7,
+      "ndcg10": 0.7377908526136739,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8290000000000007,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.76,
+      "family": "B",
+      "iterations": 100,
+      "leaves": 7,
+      "ndcg10": 0.7451196298372109,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8320000000000007,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.775,
+      "family": "B",
+      "iterations": 200,
+      "leaves": 7,
+      "ndcg10": 0.7464170786973976,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8280000000000008,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.75,
+      "family": "B",
+      "iterations": 400,
+      "leaves": 7,
+      "ndcg10": 0.7463346008549735,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8325000000000009,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.725,
+      "family": "B",
+      "iterations": 50,
+      "leaves": 15,
+      "ndcg10": 0.7383080019803188,
+      "ndcg10_denominator": 200,
+      "precision10": 0.831500000000001,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.755,
+      "family": "B",
+      "iterations": 100,
+      "leaves": 15,
+      "ndcg10": 0.7399673388689467,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8310000000000008,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.75,
+      "family": "B",
+      "iterations": 200,
+      "leaves": 15,
+      "ndcg10": 0.7364584127671567,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8245000000000009,
+      "queries": 200
+    },
+    {
+      "exact_at1": 0.755,
+      "family": "B",
+      "iterations": 400,
+      "leaves": 15,
+      "ndcg10": 0.7361902423219294,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8255000000000008,
+      "queries": 200
+    }
+  ],
+  "inputs": {
+    "train": {
+      "metadata_key": "84082e180881814013e2fa4b7af4d75b30a97a7de41b2e2dfebb6969d1493071",
+      "npy_sha256": "8c0731366007447bd8ebc6e8513aed8d565d13573ef97852b751999f624c13d3",
+      "queries": 500,
+      "records_sha256": "4e9c1ff63599831ddb9a2575ae325067f19417bd24360246a5be5b2450893220",
+      "shape": [
+        18996,
+        13
+      ]
+    },
+    "val": {
+      "metadata_key": "d4ff61b227359f9e44c883c4f0d9183db293a1a682d66cf244791b9ad3450068",
+      "npy_sha256": "dc10634ab4c209d1e1fac817ad492196e9dae7dd5045da8151b96316c18e45de",
+      "queries": 200,
+      "records_sha256": "84df663c6447bf829257bdb70aa3bfd8e353b99cb6b8fa81c9c2c60b9b0dc7a4",
+      "shape": [
+        7746,
+        13
+      ]
+    }
+  },
+  "lightgbm_version": "4.7.0",
+  "limitations": [
+    "Exploratory validation-only result after an earlier grid, not a final generalization claim.",
+    "No new holdout result was accessed; only a fresh frozen evaluation can establish improvement."
+  ],
+  "minimum_complexity_justification_delta": 0.005,
+  "ndcg10_delta_vs_selected_13_features": 0.0055633791068410154,
+  "old_model_sha256": "8d522c8b524918481cb7040d90a6f7983f779f462e4bc1cf5c65f2487c41134a",
+  "recommendation": "Consider validation winner before fresh holdout freeze.",
+  "scope": "Only train/val; no holdout read or scoring; no neural encoding; no model/cache/selection mutation.",
+  "script_sha256": "71986b0cf9f8c9dd71e91bf7e05811e4d3a14cf2caf805fbe30c9f02d0168ea7",
+  "status": "completed"
+}

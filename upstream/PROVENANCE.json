@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/amazon-science/esci-data",
+  "commit": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+  "import_scope": "README and two ranking reference files; not a complete clone; new ecom_search implementation is independent",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha": "67db8588217f266eb561f75fae738656325deac9"
+    },
+    {
+      "path": "NOTICE",
+      "sha": "616fc5889451895dbf9768e6787c8308c33bef22"
+    },
+    {
+      "path": "README.md",
+      "sha": "821a551a6265ae1cb6a3562b0ad78809978afc84"
+    },
+    {
+      "path": "ranking/train.py",
+      "sha": "7a73c2350ab1bb70e074253cebc6b848cc0dc5e6"
+    },
+    {
+      "path": "ranking/prepare_trec_eval_files.py",
+      "sha": "6f2afaffebbe6950247119dcdb49a5c34bc0c8f9"
+    }
+  ]
+}

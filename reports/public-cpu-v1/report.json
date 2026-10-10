@@ -1,0 +1,457 @@
+{
+  "catalog_products": 43222,
+  "corpus": {
+    "fts_bm25": {
+      "any_known_positive@100": {
+        "mean": 0.93,
+        "queries": 100
+      },
+      "judged_fraction@10": {
+        "mean": 0.642,
+        "queries": 100
+      },
+      "known_positive_recall@10": {
+        "mean": 0.19352999531956058,
+        "queries": 100
+      },
+      "known_positive_recall@100": {
+        "mean": 0.572473905168919,
+        "queries": 100
+      }
+    },
+    "fts_pairwise": {
+      "any_known_positive@100": {
+        "mean": 0.93,
+        "queries": 100
+      },
+      "judged_fraction@10": {
+        "mean": 0.621,
+        "queries": 100
+      },
+      "known_positive_recall@10": {
+        "mean": 0.1907025408356722,
+        "queries": 100
+      },
+      "known_positive_recall@100": {
+        "mean": 0.572473905168919,
+        "queries": 100
+      }
+    }
+  },
+  "corpus_paired_delta": {
+    "any_known_positive@100": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    },
+    "judged_fraction@10": {
+      "ci95": [
+        -0.055,
+        0.013999999999999999
+      ],
+      "delta": -0.020999999999999998,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    },
+    "known_positive_recall@10": {
+      "ci95": [
+        -0.015181686057228194,
+        0.009743185441316382
+      ],
+      "delta": -0.002827454483888359,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    },
+    "known_positive_recall@100": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    }
+  },
+  "created_at_utc": "2026-10-10T08:08:57.830523+00:00",
+  "data_fingerprints": {
+    "catalog.jsonl": "0d1647f4b4038b834154dee8ffff724e6f7c1c0613b442f1b033ba030664b67c",
+    "manifest.json": "2673b8bc76d141782ee36fd06802eb5ede8f6be9ec184a4f5b6f072e6763a95b",
+    "test.jsonl": "af6291ab92eb676c09901c3d5f9275f080c853c77cc207058cefed717059fb1a",
+    "train.jsonl": "165bc4490dc529736d209e177fb9fb5925b0b78a34f165c5a689a83252eabb58",
+    "val.jsonl": "feafe61d8fbb2bcc9fea67a277fefd7151f64e4507132bd19c75e105f7fc4946"
+  },
+  "dataset": "amazon-science/esci-data",
+  "failure_analysis": {
+    "details_file": "per_query_test.jsonl",
+    "slice_policy": "diagnostic only; no model retuning on this test",
+    "worst_fixed_pool_delta_query_ids": [
+      "esci-us-75084",
+      "esci-us-72856",
+      "esci-us-18208",
+      "esci-us-72355",
+      "esci-us-5137",
+      "esci-us-49765",
+      "esci-us-13115",
+      "esci-us-92256",
+      "esci-us-16461",
+      "esci-us-70561"
+    ]
+  },
+  "fixed_pool": {
+    "learned_pairwise": {
+      "exact@1": {
+        "mean": 0.71,
+        "queries": 100
+      },
+      "known_positive_recall@10": {
+        "mean": 0.30651337339169926,
+        "queries": 100
+      },
+      "ndcg@10": {
+        "mean": 0.7494280496498708,
+        "queries": 100
+      },
+      "p@10_es": {
+        "mean": 0.835,
+        "queries": 100
+      }
+    },
+    "title_bm25": {
+      "exact@1": {
+        "mean": 0.65,
+        "queries": 100
+      },
+      "known_positive_recall@10": {
+        "mean": 0.30264890508057835,
+        "queries": 100
+      },
+      "ndcg@10": {
+        "mean": 0.7137295902746339,
+        "queries": 100
+      },
+      "p@10_es": {
+        "mean": 0.8190000000000001,
+        "queries": 100
+      }
+    }
+  },
+  "fixed_pool_paired_delta": {
+    "exact@1": {
+      "ci95": [
+        -0.02,
+        0.15
+      ],
+      "delta": 0.06,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    },
+    "known_positive_recall@10": {
+      "ci95": [
+        -0.005864829970004878,
+        0.012720585526852308
+      ],
+      "delta": 0.0038644683111209188,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    },
+    "ndcg@10": {
+      "ci95": [
+        0.013042769167432508,
+        0.05958121772944641
+      ],
+      "delta": 0.03569845937523668,
+      "interval_excludes_zero": true,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    },
+    "p@10_es": {
+      "ci95": [
+        -0.003000000000000001,
+        0.036000000000000004
+      ],
+      "delta": 0.016,
+      "interval_excludes_zero": false,
+      "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+      "queries": 100,
+      "samples": 2000,
+      "seed": 20261010
+    }
+  },
+  "freeze_sha256": "1ba0ab62719b6083e5b69cf31d73e049cb4f95f343e5dedbe29fb9d1e58eb0e2",
+  "limits": [
+    "Text-only CPU baseline and trained linear ranker, not the historical CE/LambdaMART model",
+    "New public reproduction protocol; test overlap with prior unrelated local experiments is not excluded",
+    "Bootstrap intervals quantify query sampling variation; exploratory slices have no multiplicity correction",
+    "No online CTR/conversion, billion-product, multilingual or deep semantic accuracy claim"
+  ],
+  "metric_definitions": {
+    "corpus": "incomplete human qrels; unknown products are not labeled negatives; no corpus precision/NDCG claim",
+    "coverage": "judged_fraction@10 measures annotation coverage, not relevance",
+    "es_positive": "grade>=2 (Exact or Substitute)",
+    "ndcg": "gain=2**grade-1; macro average; zero ideal DCG excluded",
+    "precision": "fixed fully judged pool only; denominator=10"
+  },
+  "protocol": "public_cpu_v1",
+  "retrieval": {
+    "candidate_coverage_definition": "macro known-positive Recall@100; reranking preserves this set",
+    "empty_queries": 1,
+    "mean_candidates": 89.55,
+    "parser_rejected_queries": 0,
+    "pool": 100
+  },
+  "runtime": {
+    "feature_load_seconds": 18.98997579999559,
+    "latency": {
+      "rerank": {
+        "mean_ms": 160.26500299980398,
+        "p50_ms": 150.09290000307374,
+        "p95_ms": 272.1236999932444,
+        "queries": 100
+      },
+      "retrieval": {
+        "mean_ms": 33.69510099932086,
+        "p50_ms": 18.68220001051668,
+        "p95_ms": 99.33560001081787,
+        "queries": 100
+      },
+      "retrieval_and_rerank": {
+        "mean_ms": 193.96010399912484,
+        "p50_ms": 176.0948000010103,
+        "p95_ms": 350.3447999974014,
+        "queries": 100
+      }
+    },
+    "latency_protocol": "serial single process; application result cache disabled; catalog/model resident; OS cache uncontrolled; no throughput claim",
+    "machine": "AMD64",
+    "python": "3.10.21",
+    "system": "Windows",
+    "total_final_seconds": 44.097143799997866
+  },
+  "schema_version": 1,
+  "selected_epochs": 30,
+  "slices": {
+    "contains_number": {
+      "corpus_delta": {
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.04523505948815546,
+            0.01853267262516489
+          ],
+          "delta": -0.01244144439674625,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 20,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "fixed_pool_delta": {
+        "ndcg@10": {
+          "ci95": [
+            -0.02800720672034922,
+            0.04664626616522285
+          ],
+          "delta": 0.005779112736668718,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 20,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "queries": 20
+    },
+    "literal_catalog_brand": {
+      "corpus_delta": {
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.027972462395969063,
+            0.008557261405079604
+          ],
+          "delta": -0.008939669378704418,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 50,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "fixed_pool_delta": {
+        "ndcg@10": {
+          "ci95": [
+            0.013544036046787129,
+            0.08806275193146995
+          ],
+          "delta": 0.049773563903529015,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 50,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "queries": 50
+    },
+    "long_ge5_tokens": {
+      "corpus_delta": {
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.04701551798413049,
+            -0.006672547974385191
+          ],
+          "delta": -0.026367839488460314,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 38,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "fixed_pool_delta": {
+        "ndcg@10": {
+          "ci95": [
+            0.01336892520635256,
+            0.07850307653514077
+          ],
+          "delta": 0.0445714464702953,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 38,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "queries": 38
+    },
+    "no_literal_catalog_brand": {
+      "corpus_delta": {
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.013710756529332381,
+            0.020933791550252764
+          ],
+          "delta": 0.0032847604109276984,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 50,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "fixed_pool_delta": {
+        "ndcg@10": {
+          "ci95": [
+            -0.0021601801836124853,
+            0.04748544623595106
+          ],
+          "delta": 0.021623354846944345,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 50,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "queries": 50
+    },
+    "no_number": {
+      "corpus_delta": {
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.014459089232610887,
+            0.013137285370441648
+          ],
+          "delta": -0.0004239570056738867,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 80,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "fixed_pool_delta": {
+        "ndcg@10": {
+          "ci95": [
+            0.015200190097608413,
+            0.0708019093352216
+          ],
+          "delta": 0.043178296034878674,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 80,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "queries": 80
+    },
+    "short_lt5_tokens": {
+      "corpus_delta": {
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.0034672190002947773,
+            0.027948060818409327
+          ],
+          "delta": 0.011600523422139613,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 62,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "fixed_pool_delta": {
+        "ndcg@10": {
+          "ci95": [
+            0.00013899963693980274,
+            0.06260983694769455
+          ],
+          "delta": 0.03026017696213623,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 62,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "queries": 62
+    }
+  },
+  "source_fingerprints": {
+    "ecom_search/cli.py": "1a362679dc05aab2b0b2ac623755ec2f7e6e85311ac4c5f507380832512ae3ee",
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/benchmark_public.py": "b364c461cbce6971a6f5343c74b162aa6128ebf65d36b6ef0c230cd8d5f8d72e",
+    "scripts/prepare_public_esci.py": "2b514e7309625203a823d3f4240157b1770cb8d338aa314651f2903addc18153"
+  },
+  "synthetic": false,
+  "test_judged_pairs": 3741,
+  "test_queries": 100
+}

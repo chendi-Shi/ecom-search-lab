@@ -1,0 +1,44 @@
+# Local datasets, model assets, indexes, caches and user records
+/data/
+/outputs/
+/models/
+/checkpoints/
+*.sqlite
+*.sqlite-*
+*.db
+*.parquet
+*.arrow
+*.jsonl
+*.npy
+*.npz
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.bin
+*.zip
+*.tar
+*.gz
+
+# Environments and build outputs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Machine-specific configuration and secrets
+.env
+.env.*
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

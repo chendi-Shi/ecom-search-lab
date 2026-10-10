@@ -1,0 +1,31 @@
+name: Research pipeline checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  stdlib:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run zero-dependency smoke example
+        run: python -S scripts/demo.py
+      - name: Test core and experiment isolation
+        run: python -S -m unittest discover -s tests -v
+  parquet-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m pip install -r requirements-public.txt
+      - name: Test deterministic real-Parquet preparation
+        run: python -m unittest discover -s tests -p test_public_esci.py -v

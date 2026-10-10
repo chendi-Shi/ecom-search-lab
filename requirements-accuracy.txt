@@ -1,0 +1,19 @@
+# Observed accuracy serving runtime: Python 3.10.21, Windows AMD64, CPU.
+# Snapshot of key installed runtime libraries, not a complete OS/transitive lock.
+# CE fingerprint strictly binds torch/transformers/tokenizers versions and
+# requires the frozen onednn quantization engine. Do not substitute versions.
+# Supply these exact distributions from an appropriate index or local wheels;
+# availability of the +cpu torch build is not implied by this file.
+# Accuracy and image/Beauty serving do not require FAISS, pyarrow or LightGBM.
+# Re-training additionally used lightgbm==4.7.0.
+torch==2.14.0+cpu
+numpy==1.26.4
+transformers==4.57.1
+tokenizers==0.22.1
+safetensors==0.6.2
+huggingface-hub==0.36.0
+sentence-transformers==5.1.2
+scipy==1.15.3
+scikit-learn==1.7.2
+Pillow==12.3.0
+psutil==7.1.0

@@ -1,0 +1,28 @@
+{
+  "baseline_sha256": "8d522c8b524918481cb7040d90a6f7983f779f462e4bc1cf5c65f2487c41134a",
+  "chosen_kind": "lambdamart",
+  "code_files": {
+    "ecom_search/accuracy.py": "bdc62c5e03b75a75ee9399ab351ecbef48d7bc9c9100c1473cbefebdb08ae470",
+    "ecom_search/cross_encoder.py": "bf6f1f6765c1e65119b132e6482d02dc19f43cadf61a37788712a1a60af28ad5",
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/prepare_accuracy_retrieval.py": "3254301764877641576952f4789d6c37afdce12fe11d9b6e5bd1adb13d016ea3",
+    "scripts/train_accuracy.py": "371e215d7b4f1548638a05eed40f8f2f1a618f938c68e39114e042730af35719"
+  },
+  "data_files": {
+    "catalog.jsonl": "65a45b6018af4c94106052ccd765c05f01c7e058a1feff27068a2c42478f7003",
+    "test.jsonl": "4aca97c3c121a0755e115c3b60824a9b6f9edc9b639438a2155610ad18e4d4ba",
+    "train.jsonl": "e116bdc01c556a6b16b8eca61778823a1c8c8de737d83fe490f9cfe52ac5aa7e",
+    "val.jsonl": "0cf014cd9804405171c73f6ffe198b3f5d6e8f63aa64db3e63cd18ff28b0dc7c"
+  },
+  "frozen_at": "2026-10-09T11:20:33.114706+00:00",
+  "model_sha256": "142564a12f6e388122d26380bad244a965a760c7a591479851fefbddd0859f5f",
+  "protocol_sha256": "0941c24be153b48afc57b7d871a78ab7f0a27615da93098b93a4c10701a446d8",
+  "retrieval_strategy_sha256": "3e8a1f6102759cb9fae5f6a36a12f9250b5cb6f10b3fe545d18846003dd83bdb",
+  "selection_metric": "macro graded NDCG@10 on 200 validation queries",
+  "test_labels_opened": false,
+  "validation_ndcg10": 0.7481695976672633
+}

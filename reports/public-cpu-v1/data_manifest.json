@@ -1,0 +1,100 @@
+{
+  "catalog_selection": "union of all judged products from selected queries, independent of relevance grade",
+  "dataset": "amazon-science/esci-data",
+  "eligible_official_queries": {
+    "test": 1807,
+    "train": 4003
+  },
+  "evaluation_scope": "closed pools fully judged; corpus recall measures known positives in the finite selected union; unjudged pairs unknown",
+  "exclusions": {
+    "below_minimum_candidates": 24034,
+    "cross_official_partition": 0,
+    "normalized_duplicate": 0
+  },
+  "files": {
+    "catalog.jsonl": {
+      "bytes": 9283998,
+      "sha256": "0d1647f4b4038b834154dee8ffff724e6f7c1c0613b442f1b033ba030664b67c"
+    },
+    "corpus_test.jsonl": {
+      "bytes": 130545,
+      "sha256": "5cc917b473780a35bc260a26bc83e7f2c30cb6146d5ec2775958b92ee440103e"
+    },
+    "corpus_train.jsonl": {
+      "bytes": 1324922,
+      "sha256": "00a74fc89a5646e1d6f59222364f67a6a6e0dc5f722ca1e635cc91fa079ff4b1"
+    },
+    "corpus_val.jsonl": {
+      "bytes": 135448,
+      "sha256": "706600f9d8a2fbff6802c59e34b2a78d313cee1dd1b2001621c9d341fe609cac"
+    },
+    "selection.json": {
+      "bytes": 135106,
+      "sha256": "21e015c55c55b46a4a453380222694d11b1f2d8871527d3f4dc25a72a4b8dcaf"
+    },
+    "test.jsonl": {
+      "bytes": 191942,
+      "sha256": "af6291ab92eb676c09901c3d5f9275f080c853c77cc207058cefed717059fb1a"
+    },
+    "train.jsonl": {
+      "bytes": 1952985,
+      "sha256": "165bc4490dc529736d209e177fb9fb5925b0b78a34f165c5a689a83252eabb58"
+    },
+    "val.jsonl": {
+      "bytes": 200993,
+      "sha256": "feafe61d8fbb2bcc9fea67a277fefd7151f64e4507132bd19c75e105f7fc4946"
+    }
+  },
+  "grade_mapping": {
+    "C": 1,
+    "E": 3,
+    "I": 0,
+    "S": 2
+  },
+  "holdout_status": "copied without grade summaries or model evaluation; open only after train/validation selection",
+  "judged_candidates": {
+    "test": 3741,
+    "train": 38239,
+    "val": 3985
+  },
+  "license": "Apache-2.0",
+  "locale": "us",
+  "manifest_content_sha256": "9ad4e4ded8cc2a9825ac38a8fa849748bebdf937d69e64c85cedede181c9d5b8",
+  "metadata_scope": "official title and brand; description empty; no image/video or user history",
+  "minimum_judged_candidates": 20,
+  "official_commit": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+  "preparation_script_sha256": "2b514e7309625203a823d3f4240157b1770cb8d338aa314651f2903addc18153",
+  "previous_experiment_exclusion": "none; this standalone protocol is not the historical accuracy-v1 holdout",
+  "products": 43222,
+  "protocol": "public-esci-v1",
+  "queries": {
+    "test": 100,
+    "train": 1000,
+    "val": 100
+  },
+  "ranking_gain": "2**grade - 1",
+  "raw_files": {
+    "shopping_queries_dataset_examples.parquet": {
+      "bytes": 51286808,
+      "pointer_url": "https://raw.githubusercontent.com/amazon-science/esci-data/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_examples.parquet",
+      "sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+      "source_url": "https://github.com/amazon-science/esci-data/blob/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_examples.parquet"
+    },
+    "shopping_queries_dataset_products.parquet": {
+      "bytes": 1108857465,
+      "pointer_url": "https://raw.githubusercontent.com/amazon-science/esci-data/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_products.parquet",
+      "sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265",
+      "source_url": "https://github.com/amazon-science/esci-data/blob/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_products.parquet"
+    }
+  },
+  "relevant_grade_min": 2,
+  "repository": "https://github.com/amazon-science/esci-data",
+  "sampling_seed": 20261011,
+  "schema_version": 1,
+  "selection_content_sha256": "f4a466c634aa85324b8ac0cda58c7da51b708825145b7d5a0de7f51cb8ff0de3",
+  "selection_uses_esci_label": false,
+  "source_rows_scanned_without_labels": 601354,
+  "split_policy": "train/val from official train; test from official test; IDs and NFKC-casefold-whitespace query texts disjoint",
+  "synthetic": false,
+  "task_version": "official small_version=1 retrieval task"
+}

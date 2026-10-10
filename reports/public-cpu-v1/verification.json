@@ -1,0 +1,9 @@
+{
+  "scope": "public source distribution on local Python 3.10.21 Windows CPU runtime",
+  "stdlib": {"tests": 112, "passed": 83, "skipped": 29, "failures": 0, "errors": 0, "seconds": 15.880},
+  "available_cpu_dependencies": {"tests": 112, "passed": 110, "skipped": 2, "failures": 0, "errors": 0, "seconds": 22.807},
+  "remaining_skip_reason": "FAISS unavailable in the selected interpreter",
+  "parquet_version_tested": "25.0.1",
+  "synthetic_smoke": "passed with python -S",
+  "github_actions": "separate remote run; local results do not imply CI passed"
+}

@@ -1,0 +1,116 @@
+{
+  "catalog_products": 82427,
+  "latency_ms": {
+    "p50": 972.849750000023,
+    "p95": 1372.7661850000459,
+    "scope": "serial retrieval + joint encoder + all ranker comparisons; model already loaded; content cache may hit exact repeated batches"
+  },
+  "limitations": [
+    "Unjudged items have unknown relevance; known positive fraction is not full-catalog precision.",
+    "Same frozen candidate pool; Recall@100 must be identical after reranking.",
+    "50-query label-blind sample controls CPU budget; 200-query fully judged ranking is the primary endpoint."
+  ],
+  "methods": {
+    "cross_encoder": {
+      "judged_coverage10": 0.6299999999999999,
+      "judged_coverage10_denominator": 50,
+      "known_positive_fraction10": 0.5399999999999999,
+      "known_positive_fraction10_denominator": 50,
+      "known_positive_recall10": 0.17069115809280394,
+      "known_positive_recall100": 0.5053627350348672,
+      "known_positive_recall100_denominator": 50,
+      "known_positive_recall10_denominator": 50,
+      "queries": 50
+    },
+    "retrieval": {
+      "judged_coverage10": 0.5539999999999999,
+      "judged_coverage10_denominator": 50,
+      "known_positive_fraction10": 0.484,
+      "known_positive_fraction10_denominator": 50,
+      "known_positive_recall10": 0.15356329423777207,
+      "known_positive_recall100": 0.5053627350348672,
+      "known_positive_recall100_denominator": 50,
+      "known_positive_recall10_denominator": 50,
+      "queries": 50
+    },
+    "selected": {
+      "judged_coverage10": 0.594,
+      "judged_coverage10_denominator": 50,
+      "known_positive_fraction10": 0.514,
+      "known_positive_fraction10_denominator": 50,
+      "known_positive_recall10": 0.1645165150858025,
+      "known_positive_recall100": 0.5053627350348672,
+      "known_positive_recall100_denominator": 50,
+      "known_positive_recall10_denominator": 50,
+      "queries": 50
+    },
+    "transferred_pairwise": {
+      "judged_coverage10": 0.532,
+      "judged_coverage10_denominator": 50,
+      "known_positive_fraction10": 0.46399999999999997,
+      "known_positive_fraction10_denominator": 50,
+      "known_positive_recall10": 0.1481410941508611,
+      "known_positive_recall100": 0.5053627350348672,
+      "known_positive_recall100_denominator": 50,
+      "known_positive_recall10_denominator": 50,
+      "queries": 50
+    }
+  },
+  "queries": 50,
+  "query_selection": "first 50 hashes SHA256([20261010, accuracy_corpus, query_id]); before any label-dependent filtering",
+  "selected_vs_retrieval": {
+    "judged_coverage10": {
+      "ci95": [
+        -0.010000000000000002,
+        0.09200000000000001
+      ],
+      "delta": 0.04,
+      "losses": 10,
+      "queries": 50,
+      "resamples": 10000,
+      "seed": 20261010,
+      "ties": 26,
+      "wins": 14
+    },
+    "known_positive_fraction10": {
+      "ci95": [
+        -0.013999999999999995,
+        0.07400000000000001
+      ],
+      "delta": 0.03,
+      "losses": 7,
+      "queries": 50,
+      "resamples": 10000,
+      "seed": 20261010,
+      "ties": 29,
+      "wins": 14
+    },
+    "known_positive_recall10": {
+      "ci95": [
+        -0.0034792604042816365,
+        0.02593327396972908
+      ],
+      "delta": 0.010953220848030432,
+      "losses": 7,
+      "queries": 50,
+      "resamples": 10000,
+      "seed": 20261010,
+      "ties": 29,
+      "wins": 14
+    },
+    "known_positive_recall100": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "losses": 0,
+      "queries": 50,
+      "resamples": 10000,
+      "seed": 20261010,
+      "ties": 50,
+      "wins": 0
+    }
+  },
+  "status": "completed"
+}

@@ -1,0 +1,102 @@
+{
+  "choices": [
+    {
+      "kind": "cross_encoder",
+      "ndcg10": 0.7348772841828386
+    },
+    {
+      "iterations": 50,
+      "kind": "lambdamart",
+      "leaves": 7,
+      "ndcg10": 0.7440271064114471
+    },
+    {
+      "iterations": 100,
+      "kind": "lambdamart",
+      "leaves": 7,
+      "ndcg10": 0.74216598212437
+    },
+    {
+      "iterations": 200,
+      "kind": "lambdamart",
+      "leaves": 7,
+      "ndcg10": 0.7481695976672633
+    },
+    {
+      "iterations": 400,
+      "kind": "lambdamart",
+      "leaves": 7,
+      "ndcg10": 0.7419127796923851
+    },
+    {
+      "iterations": 50,
+      "kind": "lambdamart",
+      "leaves": 15,
+      "ndcg10": 0.744353227322145
+    },
+    {
+      "iterations": 100,
+      "kind": "lambdamart",
+      "leaves": 15,
+      "ndcg10": 0.7454900470677484
+    },
+    {
+      "iterations": 200,
+      "kind": "lambdamart",
+      "leaves": 15,
+      "ndcg10": 0.7450097274273105
+    },
+    {
+      "iterations": 400,
+      "kind": "lambdamart",
+      "leaves": 15,
+      "ndcg10": 0.7393466975145874
+    }
+  ],
+  "methods": {
+    "bm25": {
+      "exact_at1": 0.645,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.6990507435840293,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8115000000000007,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.2957324782282631,
+      "recall10_denominator": 200
+    },
+    "cross_encoder": {
+      "exact_at1": 0.72,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.7348772841828386,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8290000000000007,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.3078429866658696,
+      "recall10_denominator": 200
+    },
+    "selected": {
+      "exact_at1": 0.78,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.7481695976672633,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8300000000000007,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.3048217051436029,
+      "recall10_denominator": 200
+    },
+    "transferred_pairwise": {
+      "exact_at1": 0.73,
+      "exact_at1_denominator": 200,
+      "ndcg10": 0.7242851571449055,
+      "ndcg10_denominator": 200,
+      "precision10": 0.8160000000000005,
+      "precision10_denominator": 200,
+      "queries": 200,
+      "recall10": 0.29479618347106257,
+      "recall10_denominator": 200
+    }
+  }
+}
