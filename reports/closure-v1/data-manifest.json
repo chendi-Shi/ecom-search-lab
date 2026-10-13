@@ -1,0 +1,231 @@
+{
+  "catalog_selection": "union of all judged products from selected queries, independent of relevance grade",
+  "dataset": "amazon-science/esci-data",
+  "default_sample_size_rationale": "Default train count reduced from proposed 1000 to 800 before new labels were read: 4003 eligible official-train identities minus 2923 prior train/validation identities leaves at most 1080, insufficient for 1000 train + 200 validation. Keep all exclusions, minimum 20 candidates, 200 validation and 300 test; no label-based eligibility changes.",
+  "eligible_official_queries": {
+    "test": 1425,
+    "train": 1080
+  },
+  "evaluation_scope": "closed pools fully judged; corpus recall uses known positives in finite selected union; unjudged pairs unknown",
+  "exclusion_registry_file": {
+    "bytes": 480875,
+    "sha256": "fc99aadf8939a199630e79b8df800aad7b4ed962d34cbb8efc5403fce1744569"
+  },
+  "exclusions": {
+    "below_minimum_candidates": 24034,
+    "cross_official_partition": 0,
+    "normalized_duplicate": 0,
+    "prior_query_identity": 3305
+  },
+  "files": {
+    "catalog.jsonl": {
+      "bytes": 9833438,
+      "sha256": "921cd37496cde4446b527526eddd5b2e29d6f943e6c4fd50b2fe6a26ea9ec5fd"
+    },
+    "corpus_test.jsonl": {
+      "bytes": 393586,
+      "sha256": "76023c7c6155649c0cd9227a08f832b8a5646c057283829cc0153dd4f41ff044"
+    },
+    "corpus_train.jsonl": {
+      "bytes": 1061534,
+      "sha256": "8b67113e9c5263ed9a5f79b43a13ee8a777082db360d7114d4348f2a598c3073"
+    },
+    "corpus_val.jsonl": {
+      "bytes": 265678,
+      "sha256": "eff4cd4a7d8ad43fcb06689116e94e96d7fcc527d4c13dc62a033be52c5e3140"
+    },
+    "selection.json": {
+      "bytes": 147573,
+      "sha256": "afc90b6d6161f9056eebf75a1e42bb671b4e9b374d681344cf1510ad3ca857c9"
+    },
+    "test.jsonl": {
+      "bytes": 579188,
+      "sha256": "3693add0e964dec8e75a93038853461e6f14987b409e1e1a8e01fb745da7d43e"
+    },
+    "train.jsonl": {
+      "bytes": 1565273,
+      "sha256": "2c7169691653a3dd4f619eefd318ec9bfcb8177339e27093055aa60b854fd3cf"
+    },
+    "val.jsonl": {
+      "bytes": 392161,
+      "sha256": "dd3fa4bd6edf5e0548346e775dbe455aa18b9cd5e76f7c04c37b7b159d8e0d3c"
+    }
+  },
+  "grade_mapping": {
+    "C": 1,
+    "E": 3,
+    "I": 0,
+    "S": 2
+  },
+  "historical_identity_sources": [
+    {
+      "files": {
+        "corpus_test.jsonl": {
+          "bytes": 130545,
+          "sha256": "5cc917b473780a35bc260a26bc83e7f2c30cb6146d5ec2775958b92ee440103e"
+        },
+        "corpus_train.jsonl": {
+          "bytes": 1324922,
+          "sha256": "00a74fc89a5646e1d6f59222364f67a6a6e0dc5f722ca1e635cc91fa079ff4b1"
+        },
+        "corpus_val.jsonl": {
+          "bytes": 135448,
+          "sha256": "706600f9d8a2fbff6802c59e34b2a78d313cee1dd1b2001621c9d341fe609cac"
+        },
+        "manifest.json": {
+          "bytes": 4231,
+          "sha256": "2673b8bc76d141782ee36fd06802eb5ede8f6be9ec184a4f5b6f072e6763a95b"
+        },
+        "test.jsonl": {
+          "bytes": 191942,
+          "sha256": "af6291ab92eb676c09901c3d5f9275f080c853c77cc207058cefed717059fb1a"
+        },
+        "train.jsonl": {
+          "bytes": 1952985,
+          "sha256": "165bc4490dc529736d209e177fb9fb5925b0b78a34f165c5a689a83252eabb58"
+        },
+        "val.jsonl": {
+          "bytes": 200993,
+          "sha256": "feafe61d8fbb2bcc9fea67a277fefd7151f64e4507132bd19c75e105f7fc4946"
+        }
+      },
+      "label": "public_v1"
+    },
+    {
+      "files": {
+        "corpus_test.jsonl": {
+          "bytes": 155987,
+          "sha256": "6aa6c15ccf198f08ee6b4fc5180aca367c154aacddfac440e8a6368d0aff97a8"
+        },
+        "corpus_train.jsonl": {
+          "bytes": 387722,
+          "sha256": "467b3a746a83c711c4ad6466ed5473e3c2a8664d1432798a8e61c8c92d870a31"
+        },
+        "corpus_val.jsonl": {
+          "bytes": 75546,
+          "sha256": "4f3fea369b1940434af217adc368e83c405f4ec54a91150bb4c898846a307cbd"
+        },
+        "manifest.json": {
+          "bytes": 4218,
+          "sha256": "72fa003352fff6003367f6a15322554541a1863e0f27787124faf8266172c065"
+        },
+        "test.jsonl": {
+          "bytes": 137074,
+          "sha256": "154e6934a71f09b41aa8cf6e20da5cf9effaff87c946a799047d02d137a8908d"
+        },
+        "train.jsonl": {
+          "bytes": 343684,
+          "sha256": "d860a1247e48ba3af9f76dbcf67b1f3222c2080e81221a68b74efbc07dc0d20a"
+        },
+        "val.jsonl": {
+          "bytes": 68472,
+          "sha256": "41756b94cb8ecbca229f5d9e3c58264a92c5bf32c972e1ffe0d276d904fef492"
+        }
+      },
+      "label": "historical_v1"
+    },
+    {
+      "files": {
+        "corpus_test.jsonl": {
+          "bytes": 280888,
+          "sha256": "72ccba75e1d72f709b5b5af1f98f73b2026c2fd3a5768529d06914345d50b755"
+        },
+        "corpus_train.jsonl": {
+          "bytes": 2819569,
+          "sha256": "c8a90e5e6e196aa64b3ff1ec6361e16ba2c8dbde9c1145957def32ee8086f93a"
+        },
+        "corpus_val.jsonl": {
+          "bytes": 283484,
+          "sha256": "541b3b0141733b35e8bba5904ecca3b5651c9f2692c0fddaaa4da82c013b64e7"
+        },
+        "manifest.json": {
+          "bytes": 7119,
+          "sha256": "9d908b908a7422b6e560966f608da7218a63b1bf24ee06d54158d9a49b98381b"
+        },
+        "test.jsonl": {
+          "bytes": 405270,
+          "sha256": "4aca97c3c121a0755e115c3b60824a9b6f9edc9b639438a2155610ad18e4d4ba"
+        },
+        "train.jsonl": {
+          "bytes": 4066211,
+          "sha256": "e116bdc01c556a6b16b8eca61778823a1c8c8de737d83fe490f9cfe52ac5aa7e"
+        },
+        "val.jsonl": {
+          "bytes": 409566,
+          "sha256": "0cf014cd9804405171c73f6ffe198b3f5d6e8f63aa64db3e63cd18ff28b0dc7c"
+        }
+      },
+      "label": "historical_v2"
+    }
+  ],
+  "holdout_status": "labels copied only; no grade summaries or model evaluation",
+  "judged_candidates": {
+    "test": 11306,
+    "train": 30667,
+    "val": 7699
+  },
+  "license": "Apache-2.0",
+  "locale": "us",
+  "manifest_content_sha256": "18340c142414369b3ed13f8d99d2273db81e95cc3d231cb736d18f447804b24c",
+  "metadata_scope": "official title and brand; description empty; no image/video or user history",
+  "minimum_judged_candidates": 20,
+  "official_commit": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+  "previous_experiment_exclusion": {
+    "excluded_source_query_ids_by_id": 3305,
+    "excluded_source_query_ids_by_text": 3305,
+    "excluded_source_query_ids_union": 3305,
+    "freshness_scope": "Query ID and NFKC-casefold-whitespace query text are disjoint from every registered prior train/validation/test identity. Product overlap and semantic paraphrase overlap are not excluded. This does not establish that the pretrained encoder never saw ESCI.",
+    "registered_unique_normalized_queries": 3305,
+    "registered_unique_query_ids": 3305,
+    "registry_content_sha256": "540dadcc097fb9a171f1077c2be2d11d66ac5c47dbd5d52caa57a40b6fc7b5e4",
+    "selected_overlap_by_id": 0,
+    "selected_overlap_by_normalized_query": 0
+  },
+  "products": 46249,
+  "protocol": "closure-esci-v1",
+  "queries": {
+    "test": 300,
+    "train": 800,
+    "val": 200
+  },
+  "ranking_gain": "2**grade - 1",
+  "raw_files": {
+    "shopping_queries_dataset_examples.parquet": {
+      "bytes": 51286808,
+      "pointer_url": "https://raw.githubusercontent.com/amazon-science/esci-data/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_examples.parquet",
+      "sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+      "source_url": "https://github.com/amazon-science/esci-data/blob/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_examples.parquet"
+    },
+    "shopping_queries_dataset_products.parquet": {
+      "bytes": 1108857465,
+      "pointer_url": "https://raw.githubusercontent.com/amazon-science/esci-data/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_products.parquet",
+      "sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265",
+      "source_url": "https://github.com/amazon-science/esci-data/blob/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset/shopping_queries_dataset_products.parquet"
+    }
+  },
+  "relevant_grade_min": 2,
+  "repository": "https://github.com/amazon-science/esci-data",
+  "sampling_seed": 20261013,
+  "schema_version": 1,
+  "selection_content_sha256": "5a3f861f5dffddf93c0eca3a481d49002f1250532b5349ee28b775532de38b48",
+  "selection_uses_esci_label": false,
+  "source_files": {
+    "ecom_search/data.py": {
+      "bytes": 5240,
+      "sha256": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34"
+    },
+    "scripts/prepare_closure_esci.py": {
+      "bytes": 16855,
+      "sha256": "252bea87e7ad38f497a74a65deebf4aaa59987785e33964598c78e9b1d6f84dc"
+    },
+    "scripts/prepare_public_esci.py": {
+      "bytes": 16314,
+      "sha256": "2b514e7309625203a823d3f4240157b1770cb8d338aa314651f2903addc18153"
+    }
+  },
+  "source_rows_scanned_without_labels": 601354,
+  "split_policy": "train/val from official train; test from official test; ID and normalized text disjoint",
+  "synthetic": false,
+  "task_version": "official small_version=1 retrieval task",
+  "training_io_contract": "Read train and val only before model freeze; do not call load_dataset"
+}

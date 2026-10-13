@@ -1,0 +1,36 @@
+{
+  "actual_completed_run": "closure-v2",
+  "completed_protocol_sha256": "58c2a88310da21bc557787598959f0a0fa242d51ac0be7bb54c5437254d4e3da",
+  "fresh_clone_default_run": "closure-v1",
+  "previous_attempts": [
+    {
+      "absent_artifacts_checked": [
+        "trained.json",
+        "models.json",
+        "training.json",
+        "selection_started.json",
+        "validation.json",
+        "selection.json",
+        "test_started.json",
+        "report.json",
+        "release.json"
+      ],
+      "changed_sources": {
+        "scripts/benchmark_closure.py": {
+          "after": "cbe81a1bf3513b469f76f6e45a71d6c12c284b92df90236bd6a556398f298a10",
+          "before": "eedcc117d6d0944de4642c325183b8ae51a8ef696409a0829f04f0c04869708a"
+        }
+      },
+      "persistent_evidence": "protocol + training-start marker + index; no trained/validation/selection/test/report/release artifacts",
+      "protocol_sha256": "7cb9cd4f9710a04fdb2e816faeaff44302d3c8413209bc3096b056f94fc1c02f",
+      "reason": "Integrity guard fix; operator stopped the first attempt at feature caching, before validation/test.",
+      "recipe_data_and_selection_rule_unchanged": true,
+      "run": "closure-v1",
+      "status": "stopped_before_validation_or_test",
+      "training_started_file": {
+        "bytes": 133,
+        "sha256": "49f5e9eadab07008cbb9eb28a505e1620dc3ff3b70099477b9e30c8676efc7df"
+      }
+    }
+  ]
+}

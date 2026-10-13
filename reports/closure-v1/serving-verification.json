@@ -1,0 +1,28 @@
+{
+  "bindings": {
+    "model_sha256": "ab4ba20d57fa98d808ddb1cc54d8050028f0cd13f784404f1e3ed0a25b6c766f",
+    "pool": 100,
+    "release_sha256": "6ccaece8db383f48eac9913bafc0ee9d45237b560641365e726ee4b6fec71101",
+    "report_sha256": "4098f0b4999de80d3028f1bd3a6edd0259f92aa1c2058aa3f4b3b58120616fa3",
+    "service_sha256": "d409f1feddd0b891710b3eac8daaf1a8fab4fe7c27c04b1836af33a9ce56b626",
+    "serving_variant": "soft_bm25"
+  },
+  "candidate_id_entries": 54547,
+  "candidate_order_exact": true,
+  "decision_changed": false,
+  "displayed_top10_exact": true,
+  "html_sha256": "ef00547765240a6f8ba28f9a09340ba7eb93699e0d8554fc792756067e4c0537",
+  "new_metrics_computed": false,
+  "note": "Both baseline and deployed variant replayed for every sealed query; a rejected candidate is not deployed.",
+  "passed": true,
+  "protocol": "fresh_query_closure_v1",
+  "queries": 300,
+  "ranking_ids_and_scores_exact": true,
+  "rankings": 600,
+  "score_entries": 54547,
+  "seconds": 48.17927719999989,
+  "test_transcripts_sha256": "c9f3c9fdb174708e3ce6c43590bac1e64f9fefd33c444ad1a9c82ab5324b9a26",
+  "transport": "real loopback HTTP",
+  "verification_source_sha256": "9c310e73079a9f204a00dd31208bf7744d9f9aa63d8063144218bdd60a6a21bd",
+  "verified_at_utc": "2026-10-13T04:13:07.922013+00:00"
+}

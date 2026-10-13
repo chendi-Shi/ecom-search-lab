@@ -4,6 +4,35 @@
 
 基于 [Amazon ESCI](https://github.com/amazon-science/esci-data) 的公开数据与研究代码扩展，用于学习、实验和项目展示。与 TikTok/字节跳动无隶属关系。
 
+## 最新：从消融到独立验证与服务闭环
+
+已补齐“发现召回损失 → 固定修正方案 → 新查询验证 → 一次测试 → 实际服务 → HTTP回放”的流程。排除三套历史实验的全部3,305个查询ID与归一化文本，使用46,249件商品和800/200/300条新训练/验证/测试查询。[完整闭环结果](docs/CLOSURE_RESULTS.md) · [预设协议](docs/CLOSURE_PROTOCOL.md)。
+
+验证集比较六个固定配置，选择了 **取消自然语言硬过滤 + BM25（soft_bm25）**。300条独立测试的结果如下，区间单位为百分点：
+
+| 指标 | 旧硬过滤 + BM25 | 发布配置 | 增量95%配对区间 |
+|---|---:|---:|---:|
+| 已知E/S正例 Recall@10 | 20.35% | **20.79%** | **[+0.06, +0.90]** |
+| 候选 Recall@100 | 62.17% | **66.93%** | **[+3.15, +6.60]** |
+
+两项预设发布门槛均通过，最新工作台默认启用该配置。显式 `-word` 仍执行字面排除。召回池训练相对人工候选训练有验证集改善，但两个学习排序方案仍低于BM25，因此没有被选中；完整正负结果均保留。这里确认的是有限商品库上已知正例召回的小幅提升，不等同全局准确率或线上转化收益。
+
+新克隆可直接复现，不需要历史本地数据：
+
+```bash
+python -m pip install -r requirements-public.txt
+python scripts/prepare_closure_esci.py prepare --download
+python scripts/benchmark_closure.py prepare
+python scripts/benchmark_closure.py train
+python scripts/benchmark_closure.py select
+python scripts/benchmark_closure.py final
+python scripts/serve_closure.py --port 18868
+```
+
+打开 <http://127.0.0.1:18868/>。另开终端运行 `python scripts/verify_closure_serving.py`，核对全部300条查询的完整候选与排序分数；已完成的实测记录见 [HTTP回放证据](reports/closure-v1/serving-verification.json)。输出目录和封存测试拒绝覆盖；本次维护执行在 `outputs/closure-v2`，新克隆默认使用 `outputs/closure-v1`，详见执行记录。
+
+下面保留原公共基线与历史研究模块的独立复现入口，避免把不同数据集上的分数混作增益。
+
 ## 从真实数据运行完整实验
 
 需要 Python 3.10+，不需要 GPU。独立公开入口从固定提交的官方 ESCI Parquet 开始，生成查询划分、训练模型、封存测试并启动浏览器搜索。默认数据配置已实跑：43,222 商品，1,000/100/100 个训练/验证/测试查询，全部使用官方人工标注。
@@ -42,7 +71,7 @@ python -S -m unittest discover -s tests -v
 
 `demo.py` 使用 6 个手写虚构商品检查真实索引、品牌排除、数字匹配和缓存，零依赖、零网络。这仅是 smoke test；上面的真实数据入口才是完整实验。缺少可选依赖的研究模块测试会明确跳过。GitHub Actions 配置在 Python 3.10/3.12 下运行标准库测试。
 
-本地公开副本验证：131 项测试，当前 CPU 环境 129 项通过、2 项因缺少 FAISS 跳过；标准库环境 98 项通过、33 项因缺少可选依赖跳过，均无失败。新增19项消融协议测试，覆盖重训、输入篡改、模型复现与测试标签读取顺序。详见 [本轮验证记录](reports/ablation-summary-v1/verification.json)。
+最新公开副本验证：167 项测试，CPU环境165项通过、2项可选FAISS测试跳过；标准库环境133项通过、34项因可选依赖缺失跳过，均无失败。本轮新增36项数据隔离、冻结绑定、发布回退与服务契约测试。[本轮验证记录](reports/closure-v1/verification.json)；[上一轮消融验证](reports/ablation-summary-v1/verification.json)。
 
 ## 实现了什么
 

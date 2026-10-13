@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ecom Search Lab · 独立验证与发布</title>
+  <style>
+    :root{color-scheme:light;--ink:#15262b;--muted:#607277;--line:#d7e2df;--paper:#f4f7f2;--green:#126154;--gold:#926115}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+    main{max-width:1240px;margin:auto;padding:38px 30px 64px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:38px}.wordmark{font-size:14px;font-weight:750;letter-spacing:.1em}.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--green);text-transform:uppercase}.pill{border:1px solid var(--line);border-radius:40px;padding:5px 13px;font-size:12px;background:#fff}h1{font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.035em;margin:10px 0 16px}h2{font-size:18px;margin:0}.intro{max-width:780px;color:var(--muted);margin:0 0 28px}.status{border-left:4px solid var(--green);padding:18px 22px;background:#e5efe9;margin-bottom:20px}.status.hold{border-color:var(--gold);background:#f3ead8}.status strong{display:block;font-size:17px}.status p{margin:5px 0 0;font-size:14px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}.metric{background:white;border:1px solid var(--line);padding:19px 20px}.metric .value{display:block;font-size:28px;line-height:1.5;font-variant-numeric:tabular-nums}.label{font-size:12px;color:var(--muted)}.subvalue{font-size:12px;color:var(--muted)}.search{background:white;border:1px solid var(--line);padding:24px;margin-top:30px}label{display:block;font-weight:650;margin-bottom:9px}.controls{display:flex;gap:10px}input{min-width:0;flex:1;border:1px solid #aabbba;border-radius:4px;padding:12px 14px;font:inherit;color:var(--ink)}input:focus{outline:2px solid #94b8ad;outline-offset:2px}button{border:0;border-radius:4px;background:var(--green);color:white;padding:11px 22px;font:inherit;font-weight:600;cursor:pointer}button:disabled{opacity:.6;cursor:wait}.help{color:var(--muted);font-size:12px;margin:12px 0 0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}.chips button{background:#eef3ef;color:var(--green);font-size:12px;font-weight:500;padding:5px 10px}.error{color:#a23b2e;font-weight:600;margin-top:12px}.results{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}.column{min-width:0;border:1px solid var(--line);background:white}.column-head{padding:18px 20px;border-bottom:1px solid var(--line);background:#edf2ed}.column:nth-child(2) .column-head{background:#e3eeea}.variant{font:12px ui-monospace,monospace;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}.empty{padding:32px 20px;color:var(--muted)}ol{list-style:none;padding:0;margin:0}.product{padding:17px 20px;border-top:1px solid #e8ede7;display:grid;grid-template-columns:25px 1fr;gap:10px}.product:first-child{border-top:0}.rank{font-size:12px;color:var(--muted);padding-top:3px}.title{font-size:14px;font-weight:620;line-height:1.45;overflow-wrap:anywhere}.details{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:7px}.caption{font-size:12px;color:var(--muted);margin:14px 0 0}.protocol{margin-top:34px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--muted)}.protocol p{margin:8px 0}details{margin-top:15px}summary{cursor:pointer;color:var(--green)}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;padding:16px;background:#e9efea}.badge{font-size:11px;display:inline-block;border-radius:3px;background:#deece5;color:var(--green);padding:1px 5px;margin-left:6px}a{color:var(--green)}@media(max-width:740px){main{padding:22px 16px 40px}header{margin-bottom:26px}.metrics{grid-template-columns:1fr 1fr}.results{grid-template-columns:1fr}.controls{flex-wrap:wrap}.controls button{width:100%}.search{padding:18px}.metric{padding:14px}.metric .value{font-size:24px}}
+  </style>
+</head>
+<body><main>
+  <header><span class="wordmark">ECOM SEARCH LAB</span><span class="pill">CPU · 可复现搜索实验</span></header>
+  <div class="eyebrow">Independent validation → serving</div>
+  <h1>让实验结论决定实际搜索。</h1>
+  <p class="intro">旧消融发现自然语言硬过滤会丢失候选。本轮排除历史查询，用独立验证集选择方案，再由封存测试决定是否发布。这里运行的是通过发布判定后的真实配置。</p>
+  <section id="status" class="status" aria-live="polite"><strong>正在核对本次发布…</strong><p>读取数据、模型、报告与发布配置。</p></section>
+  <section class="metrics" aria-label="独立测试指标">
+    <div class="metric"><span class="label">基线 · 已知正例 Recall@10</span><span class="value" id="baselineMetric">—</span><span class="subvalue">测试查询宏平均</span></div>
+    <div class="metric"><span class="label">选中方案 · 已知正例 Recall@10</span><span class="value" id="selectedMetric">—</span><span class="subvalue" id="selectedName">—</span></div>
+    <div class="metric"><span class="label">选中方案相对基线</span><span class="value" id="deltaMetric">—</span><span class="subvalue" id="interval">95% 配对置信区间</span></div>
+    <div class="metric"><span class="label">独立测试 / 商品库</span><span class="value" id="queryCount">—</span><span class="subvalue" id="productCount">—</span></div>
+  </section>
+  <p class="caption">Recall 仅衡量已标注正例的找回比例，不是“准确率”。未标注商品视为未知；这个有限商品库的结果不代表全量电商或线上转化率。</p>
+  <section class="search">
+    <form id="searchForm"><label for="query">比较基线与实际发布配置</label><div class="controls"><input id="query" name="query" maxlength="2000" required value="headphones without microphone" autocomplete="off" placeholder="输入英文商品需求"><button id="submit" type="submit" disabled>搜索并比较</button></div></form>
+    <p class="help">每列独立召回最多 100 个候选，再展示前 10 个。英文搜索；“-word”保留显式字面排除。自然语言否定如何处理取决于下方标明的实际检索策略。</p>
+    <div class="chips"><button type="button" data-query="headphones without microphone">headphones without microphone</button><button type="button" data-query="camera -sony">camera -sony</button><button type="button" data-query="wireless keyboard">wireless keyboard</button></div>
+    <div id="error" class="error" role="alert"></div>
+  </section>
+  <section class="results" aria-live="polite">
+    <div class="column"><div class="column-head"><h2>固定基线</h2><div class="variant" id="baselineName">legacy_bm25</div></div><div id="baselineResults" class="empty">输入查询查看真实检索结果。</div></div>
+    <div class="column"><div class="column-head"><h2>实际发布配置</h2><div class="variant" id="servingName">正在加载…</div></div><div id="servingResults" class="empty">发布门槛未通过时，自动保留基线。</div></div>
+  </section>
+  <p id="poolNote" class="caption">候选池可能不同；两列分数不表示相关概率，也不宜直接比较大小。</p>
+  <section class="protocol"><h2>这次结论的边界</h2><p>验证集只负责选方案。测试主指标的 95% 置信区间下界须大于 0，且候选 Recall@100 差值区间下界不得低于 −1 个百分点，两个条件同时满足才启用新方案。</p><p>soft 策略取消自然语言硬过滤；启用学习排序时，否定特征可作为软信号，BM25 仅按词法匹配排序。显式“-word”继续按字面排除；legacy 策略保留原有自然语言硬过滤。商品标题不足以提供完整的语义或商品属性保证。</p><p>服务与离线评估调用同一个检索排序引擎；启动时核验完整数据、源码、模型、冻结选择和报告的 SHA-256 绑定。</p><details><summary>查看本次发布指纹和完整测试报告</summary><p><a href="/api/report" target="_blank" rel="noopener">完整报告 JSON</a></p><pre id="provenance">加载中…</pre></details></section>
+</main>
+<script>
+  const $ = id => document.getElementById(id);
+  const pct = value => typeof value === 'number' ? (value * 100).toFixed(2) + '%' : '未定义';
+  const pp = value => typeof value === 'number' ? (value >= 0 ? '+' : '') + (value * 100).toFixed(2) + ' pp' : '未定义';
+  let metadata;
+  async function read(url, options) { const response = await fetch(url, options); const body = await response.json(); if (!response.ok) throw new Error(body.error || '请求失败'); return body; }
+  function showColumn(target, result, others) {
+    target.className = '';
+    target.replaceChildren();
+    if (!result.results.length) { target.className = 'empty'; target.textContent = '该策略未召回商品。'; return; }
+    const list = document.createElement('ol');
+    result.results.forEach((product, i) => {
+      const item = document.createElement('li'); item.className = 'product';
+      const rank = document.createElement('span'); rank.className = 'rank'; rank.textContent = String(i + 1).padStart(2, '0');
+      const content = document.createElement('div'); const title = document.createElement('div'); title.className = 'title'; title.textContent = product.title || product.id;
+      if (!others.has(product.id)) { const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = '此列独有 Top 10'; title.append(badge); }
+      const details = document.createElement('div'); details.className = 'details';
+      [product.brand || '品牌未提供', product.id, 'score ' + Number(product.score).toPrecision(5)].forEach(value => { const text = document.createElement('span'); text.textContent = value; details.append(text); });
+      content.append(title, details); item.append(rank, content); list.append(item);
+    }); target.append(list);
+  }
+  async function search(event) {
+    if (event) event.preventDefault(); if (!metadata) return;
+    $('error').textContent = ''; $('submit').disabled = true; $('submit').textContent = '正在搜索…';
+    try {
+      const result = await read('/api/search', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({query:$('query').value, k:10})});
+      showColumn($('baselineResults'), result.baseline, new Set(result.serving.results.map(p => p.id)));
+      showColumn($('servingResults'), result.serving, new Set(result.baseline.results.map(p => p.id)));
+      $('baselineName').textContent = 'legacy_bm25 · ' + result.baseline.candidate_ids.length + ' 个候选';
+      $('servingName').textContent = result.serving_variant + ' · ' + result.serving.candidate_ids.length + ' 个候选';
+      const common = result.baseline.candidate_ids.filter(id => result.serving.candidate_ids.includes(id)).length;
+      $('poolNote').textContent = '两列候选交集 ' + common + ' 个。排序分数不是相关概率。' + (!result.promoted ? '本轮未晋级，实际发布列与固定基线一致。' : '实际发布列使用测试门槛通过的配置。');
+    } catch (error) { $('error').textContent = error.message; }
+    finally { $('submit').disabled = false; $('submit').textContent = '搜索并比较'; }
+  }
+  $('searchForm').addEventListener('submit', search);
+  document.querySelectorAll('[data-query]').forEach(button => button.addEventListener('click', () => { $('query').value = button.dataset.query; search(); }));
+  (async () => {
+    try {
+      const [health, report] = await Promise.all([read('/health'), read('/api/report')]); metadata = health;
+      const status = $('status'); status.classList.toggle('hold', !health.promoted); status.replaceChildren();
+      const title = document.createElement('strong'); title.textContent = health.promoted ? '独立测试通过，新方案已启用' : health.selected_variant === health.baseline_variant ? '验证集选中基线，继续使用原配置' : '独立测试未满足发布门槛，继续使用基线';
+      const description = document.createElement('p'); description.textContent = '验证集选中 ' + health.selected_variant + '；当前服务 ' + health.serving_variant + '。' + (health.promoted ? '以下搜索直接运行已晋级配置。' : '选中方案的实验结果保留在报告中，未作为默认搜索发布。'); status.append(title, description);
+      $('baselineMetric').textContent = pct(report.summary[health.baseline_variant]['known_positive_recall@10'].mean);
+      $('selectedMetric').textContent = pct(report.summary[health.selected_variant]['known_positive_recall@10'].mean);
+      $('selectedName').textContent = health.selected_variant; $('deltaMetric').textContent = pp(report.primary_comparison.delta);
+      const ci = report.primary_comparison.ci95; $('interval').textContent = ci ? '95% CI [' + pp(ci[0]) + ', ' + pp(ci[1]) + ']' : '无可定义的已知正例 Recall';
+      $('queryCount').textContent = report.queries + ' 条查询'; $('productCount').textContent = Number(health.products).toLocaleString() + ' 件商品 · ' + report.queries_without_known_positives + ' 条无已知正例';
+      $('servingName').textContent = health.serving_variant; $('provenance').textContent = JSON.stringify(health, null, 2); $('submit').disabled = false;
+    } catch (error) { metadata = undefined; $('submit').disabled = true; $('status').classList.add('hold'); $('status').textContent = '无法读取已绑定发布：' + error.message; $('error').textContent = '服务不可用，未展示缓存或演示指标。'; }
+  })();
+</script></body></html>

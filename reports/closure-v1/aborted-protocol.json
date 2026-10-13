@@ -1,0 +1,92 @@
+{
+  "baseline": "legacy_bm25",
+  "bootstrap": {
+    "samples": 2000,
+    "seed": 20261013
+  },
+  "capacity_note": "identity-only scan left 1080 eligible official-train queries; use 800 train/200 val/300 test, min20 candidates",
+  "data_fingerprints": {
+    "catalog.jsonl": "921cd37496cde4446b527526eddd5b2e29d6f943e6c4fd50b2fe6a26ea9ec5fd",
+    "manifest.json": "2f59555f795d511029a948e7cf494018e9fdff6c135e6743aea3d5a74d1709fa",
+    "selection.json": "afc90b6d6161f9056eebf75a1e42bb671b4e9b374d681344cf1510ad3ca857c9",
+    "test.jsonl": "3693add0e964dec8e75a93038853461e6f14987b409e1e1a8e01fb745da7d43e",
+    "train.jsonl": "2c7169691653a3dd4f619eefd318ec9bfcb8177339e27093055aa60b854fd3cf",
+    "val.jsonl": "dd3fa4bd6edf5e0548346e775dbe455aa18b9cd5e76f7c04c37b7b159d8e0d3c"
+  },
+  "dataset": "amazon-science/esci-data",
+  "pool": 100,
+  "population": "all selected queries retained; no-positive queries have undefined recall and are counted separately",
+  "positive_grades": [
+    2,
+    3
+  ],
+  "previous_experiment_exclusion": {
+    "excluded_source_query_ids_by_id": 3305,
+    "excluded_source_query_ids_by_text": 3305,
+    "excluded_source_query_ids_union": 3305,
+    "freshness_scope": "Query ID and NFKC-casefold-whitespace query text are disjoint from every registered prior train/validation/test identity. Product overlap and semantic paraphrase overlap are not excluded. This does not establish that the pretrained encoder never saw ESCI.",
+    "registered_unique_normalized_queries": 3305,
+    "registered_unique_query_ids": 3305,
+    "registry_content_sha256": "540dadcc097fb9a171f1077c2be2d11d66ac5c47dbd5d52caa57a40b6fc7b5e4",
+    "selected_overlap_by_id": 0,
+    "selected_overlap_by_normalized_query": 0
+  },
+  "primary": "known_positive_recall@10",
+  "promotion_rule": {
+    "candidate_recall_delta_ci95_lower_at_least": -0.01,
+    "primary_ci95_lower_strictly_above": 0.0
+  },
+  "protocol": "fresh_query_closure_v1",
+  "registered_at_utc": "2026-10-13T03:47:27.348915+00:00",
+  "scope": "fresh query IDs/text vs three historical cohorts; finite judged-union catalog; products may overlap history; incomplete judgments",
+  "selection_rule": "highest validation macro R@10 among candidate R@100 >= baseline mean; ties follow variant order, baseline first",
+  "source_fingerprints": {
+    "ecom_search/cli.py": "1a362679dc05aab2b0b2ac623755ec2f7e6e85311ac4c5f507380832512ae3ee",
+    "ecom_search/closure.py": "31e0cf73ea08b2ecec82b43419b8b25a88886cd22bb019231c4c33f7b9e1228b",
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/benchmark_closure.py": "eedcc117d6d0944de4642c325183b8ae51a8ef696409a0829f04f0c04869708a",
+    "scripts/benchmark_public.py": "b364c461cbce6971a6f5343c74b162aa6128ebf65d36b6ef0c230cd8d5f8d72e",
+    "scripts/prepare_closure_esci.py": "252bea87e7ad38f497a74a65deebf4aaa59987785e33964598c78e9b1d6f84dc",
+    "scripts/prepare_public_esci.py": "2b514e7309625203a823d3f4240157b1770cb8d338aa314651f2903addc18153"
+  },
+  "synthetic": false,
+  "test_comparisons": "one frozen selected vs baseline primary comparison; coverage is a conjunctive safety guard",
+  "test_labels_decoded": false,
+  "training": {
+    "epochs": 30,
+    "l2": 0.001,
+    "learning_rate": 0.05,
+    "seed": 20261013
+  },
+  "training_labels": "retrieved model uses soft top100 intersect existing human qrels; unjudged is unknown, never a negative",
+  "variants": {
+    "legacy_bm25": {
+      "policy": "legacy",
+      "ranker": "bm25"
+    },
+    "legacy_judged": {
+      "policy": "legacy",
+      "ranker": "judged"
+    },
+    "legacy_retrieved": {
+      "policy": "legacy",
+      "ranker": "retrieved"
+    },
+    "soft_bm25": {
+      "policy": "soft",
+      "ranker": "bm25"
+    },
+    "soft_judged": {
+      "policy": "soft",
+      "ranker": "judged"
+    },
+    "soft_retrieved": {
+      "policy": "soft",
+      "ranker": "retrieved"
+    }
+  }
+}

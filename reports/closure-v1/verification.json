@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "tests": {
+    "cpu": {
+      "tests": 167,
+      "passed": 165,
+      "skipped": 2,
+      "seconds": 98.871,
+      "log_sha256": "27c8f29813af1efac0e0db6ae981bba02c4dfa28e21e4aebefa09fda3a3c26fe"
+    },
+    "stdlib": {
+      "tests": 167,
+      "passed": 133,
+      "skipped": 34,
+      "seconds": 73.068,
+      "log_sha256": "7ddbde5d23d4a2c6fc8879fc511bb9ebbc19b0ef745eb03fa12725adaab12d91"
+    }
+  },
+  "optional_skips": "CPU: FAISS 2; stdlib: optional dependencies 34",
+  "new_contract_tests": 36,
+  "source_policy": "Historical evaluation sources unchanged; new modules used for fresh protocol",
+  "http": {
+    "passed": true,
+    "queries": 300,
+    "rankings": 600,
+    "candidate_id_entries": 54547,
+    "score_entries": 54547,
+    "exact": true
+  },
+  "browser_visual_check": {
+    "status": "unavailable",
+    "reason": "In-app browser attach timeout and Edge automation timeout; no visual pass claimed"
+  },
+  "verified_at_utc": "2026-10-13T04:15:01.883Z",
+  "source_sha256": {
+    "ecom_search/closure.py": "31e0cf73ea08b2ecec82b43419b8b25a88886cd22bb019231c4c33f7b9e1228b",
+    "scripts/benchmark_closure.py": "cbe81a1bf3513b469f76f6e45a71d6c12c284b92df90236bd6a556398f298a10",
+    "scripts/prepare_closure_esci.py": "252bea87e7ad38f497a74a65deebf4aaa59987785e33964598c78e9b1d6f84dc",
+    "scripts/serve_closure.py": "d409f1feddd0b891710b3eac8daaf1a8fab4fe7c27c04b1836af33a9ce56b626",
+    "scripts/verify_closure_serving.py": "9c310e73079a9f204a00dd31208bf7744d9f9aa63d8063144218bdd60a6a21bd",
+    "web/closure.html": "ef00547765240a6f8ba28f9a09340ba7eb93699e0d8554fc792756067e4c0537",
+    "tests/test_closure_benchmark.py": "fc4bbd09bfa205599aeda479042af6f31663cbaeb717181e24111966c457a740",
+    "tests/test_closure_data.py": "b0ee9fd6e6c394aad39a4f19afb3396c26a5d27e645fcde040f4344f416d252e",
+    "tests/test_closure_engine.py": "0ae06e6d100cb84c9346bb1faa6fd997dd296f1ad7ffd5ba5f54ec42f54ca42b",
+    "tests/test_closure_service.py": "eaf330eabf36d65811355516c3c4080d5775ea3336bd9354c34843ad10f1d3ea"
+  }
+}

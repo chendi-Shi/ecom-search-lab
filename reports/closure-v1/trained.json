@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "models.json": "ab4ba20d57fa98d808ddb1cc54d8050028f0cd13f784404f1e3ed0a25b6c766f",
+    "products.sqlite": "453910a045b2060ce6af10142e44b7506bba929ede2708cf48915aa194bc4aac",
+    "protocol.json": "58c2a88310da21bc557787598959f0a0fa242d51ac0be7bb54c5437254d4e3da",
+    "training.json": "0b4f5c6771c1342007ff45303423fee701153e95ede76e83e20ff4a7f2a35366"
+  },
+  "catalog_sha256": "dd453cf5d95b8cdd4e3d7adce5cbc4d3eb5fe8d2d4dc2d73158aab1ec2d441c0",
+  "frozen_at_utc": "2026-10-13T04:04:34.541040+00:00",
+  "protocol": "fresh_query_closure_v1",
+  "test_labels_decoded": false
+}

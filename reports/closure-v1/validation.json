@@ -1,0 +1,136 @@
+{
+  "eligible": [
+    "legacy_bm25",
+    "legacy_judged",
+    "legacy_retrieved",
+    "soft_bm25",
+    "soft_judged",
+    "soft_retrieved"
+  ],
+  "latency": {
+    "legacy_bm25": {
+      "mean_ms": 62.22800600000937,
+      "p50_ms": 38.8186999998652,
+      "p95_ms": 185.08579999979702,
+      "queries": 200
+    },
+    "legacy_judged": {
+      "mean_ms": 351.075703000015,
+      "p50_ms": 308.2556999997905,
+      "p95_ms": 674.8984999994718,
+      "queries": 200
+    },
+    "legacy_retrieved": {
+      "mean_ms": 91.14347599996563,
+      "p50_ms": 58.54189999990922,
+      "p95_ms": 225.22939999998925,
+      "queries": 200
+    },
+    "soft_bm25": {
+      "mean_ms": 46.254503999994085,
+      "p50_ms": 30.932700000448676,
+      "p95_ms": 135.01479999922594,
+      "queries": 200
+    },
+    "soft_judged": {
+      "mean_ms": 64.18681000003289,
+      "p50_ms": 51.02989999977581,
+      "p95_ms": 147.77850000064063,
+      "queries": 200
+    },
+    "soft_retrieved": {
+      "mean_ms": 66.65504799998871,
+      "p50_ms": 49.063500000556814,
+      "p95_ms": 173.38899999958812,
+      "queries": 200
+    }
+  },
+  "queries": 200,
+  "selected": "soft_bm25",
+  "summary": {
+    "legacy_bm25": {
+      "candidate_recall@100": {
+        "mean": 0.5915912171262494,
+        "queries": 200
+      },
+      "judged_fraction@10": {
+        "mean": 0.6405,
+        "queries": 200
+      },
+      "known_positive_recall@10": {
+        "mean": 0.19126912780613867,
+        "queries": 200
+      }
+    },
+    "legacy_judged": {
+      "candidate_recall@100": {
+        "mean": 0.5915912171262494,
+        "queries": 200
+      },
+      "judged_fraction@10": {
+        "mean": 0.6145,
+        "queries": 200
+      },
+      "known_positive_recall@10": {
+        "mean": 0.18189133540653069,
+        "queries": 200
+      }
+    },
+    "legacy_retrieved": {
+      "candidate_recall@100": {
+        "mean": 0.5915912171262494,
+        "queries": 200
+      },
+      "judged_fraction@10": {
+        "mean": 0.6315,
+        "queries": 200
+      },
+      "known_positive_recall@10": {
+        "mean": 0.18665038113657567,
+        "queries": 200
+      }
+    },
+    "soft_bm25": {
+      "candidate_recall@100": {
+        "mean": 0.6373370309408007,
+        "queries": 200
+      },
+      "judged_fraction@10": {
+        "mean": 0.6705,
+        "queries": 200
+      },
+      "known_positive_recall@10": {
+        "mean": 0.198281828495095,
+        "queries": 200
+      }
+    },
+    "soft_judged": {
+      "candidate_recall@100": {
+        "mean": 0.6373370309408007,
+        "queries": 200
+      },
+      "judged_fraction@10": {
+        "mean": 0.6245,
+        "queries": 200
+      },
+      "known_positive_recall@10": {
+        "mean": 0.18503015917675864,
+        "queries": 200
+      }
+    },
+    "soft_retrieved": {
+      "candidate_recall@100": {
+        "mean": 0.6373370309408007,
+        "queries": 200
+      },
+      "judged_fraction@10": {
+        "mean": 0.639,
+        "queries": 200
+      },
+      "known_positive_recall@10": {
+        "mean": 0.18908913138414946,
+        "queries": 200
+      }
+    }
+  }
+}

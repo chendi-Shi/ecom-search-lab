@@ -1,0 +1,82 @@
+{
+  "exporter_sha256": "8f40a1369562d0c28bd04cb1e35b28443c4f4c6398db3130934c20b03230d44b",
+  "files": {
+    "aborted-protocol.json": {
+      "bytes": 4304,
+      "sha256": "7cb9cd4f9710a04fdb2e816faeaff44302d3c8413209bc3096b056f94fc1c02f"
+    },
+    "aborted-training-started.json": {
+      "bytes": 133,
+      "sha256": "49f5e9eadab07008cbb9eb28a505e1620dc3ff3b70099477b9e30c8676efc7df"
+    },
+    "attempts.json": {
+      "bytes": 1400,
+      "sha256": "b510a2a080f9fe3adb2806a9b3667b91af7c5aacd41125e50367c13edcbbd799"
+    },
+    "data-manifest.json": {
+      "bytes": 9247,
+      "sha256": "2f59555f795d511029a948e7cf494018e9fdff6c135e6743aea3d5a74d1709fa"
+    },
+    "protocol.json": {
+      "bytes": 4304,
+      "sha256": "58c2a88310da21bc557787598959f0a0fa242d51ac0be7bb54c5437254d4e3da"
+    },
+    "release.json": {
+      "bytes": 2786,
+      "sha256": "6ccaece8db383f48eac9913bafc0ee9d45237b560641365e726ee4b6fec71101"
+    },
+    "report.json": {
+      "bytes": 7741,
+      "sha256": "4098f0b4999de80d3028f1bd3a6edd0259f92aa1c2058aa3f4b3b58120616fa3"
+    },
+    "selection.json": {
+      "bytes": 93841,
+      "sha256": "d568a32a71e0f35eb57e709226de442de373675d3b02ed0417986dd48a79f15a"
+    },
+    "selection_started.json": {
+      "bytes": 132,
+      "sha256": "987cbc043f93c4cd7ca7ed2e6a46181764de0374b9c4d767d8802ae2db665e7b"
+    },
+    "serving-verification.json": {
+      "bytes": 1282,
+      "sha256": "35fdfd12befd65ec92fb3540d255a92db20229b1740e2f49d1d304f6319834f7"
+    },
+    "summary.json": {
+      "bytes": 5424,
+      "sha256": "da04085ac1a1e5378aab93dba16fd2ab37eb4c8d79602e6f2c4ea79dcb702eb1"
+    },
+    "test_started.json": {
+      "bytes": 134,
+      "sha256": "0340eef50173a7dfcf6e67867417f721485363515864f825924897f545a8b20d"
+    },
+    "trained.json": {
+      "bytes": 595,
+      "sha256": "848021bff27eb5b469de0824c4533fec397192f0b4c84e4e19c1691322783dd7"
+    },
+    "training-summary.json": {
+      "bytes": 4512,
+      "sha256": "4f9e3dc480e0f1947c2eccc6abd1a6c821066a20b2a9ef276a06fe84790b4f3c"
+    },
+    "training_started.json": {
+      "bytes": 133,
+      "sha256": "04fe7cb8526d07c41d8f46e8fff6cc73fd19cb744d0e489a8ec4d95375423417"
+    },
+    "validation.json": {
+      "bytes": 3085,
+      "sha256": "09d19080bf70cb8b51559830f17f0cb3144631758db66f0622b0b9a9e3cd2ae6"
+    }
+  },
+  "raw_query_records_models_indexes_transcripts_exported": false,
+  "source_training_sha256": "0b4f5c6771c1342007ff45303423fee701153e95ede76e83e20ff4a7f2a35366",
+  "verification": "passed before export",
+  "verified_bindings": [
+    "protocol/source/data",
+    "trained artifacts",
+    "validation selection artifacts",
+    "report protocol/selection/prediction",
+    "release artifacts",
+    "release gate",
+    "exclusive stage-start markers",
+    "historical attempt status"
+  ]
+}
