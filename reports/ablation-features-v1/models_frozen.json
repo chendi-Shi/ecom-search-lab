@@ -1,0 +1,10 @@
+{
+  "artifact_fingerprints": {
+    "models.json": "7203af6d33dd6a04c4db1bf94a3790b07c9125d8ddd95d89420ad73cfbd268ec",
+    "protocol.json": "a1bb4ef42f579a95fa8e5aac5317ce40439c20199115dd4d20b64d55de630d25",
+    "train_features.jsonl": "474fba6f592f016cdfb54672ee02e4c02e3db52f75589c6bee71ef797a4d4ad4",
+    "training.json": "3f42a8dd69e1fdad539d401b7936b04484a11127a331469dbc0ff40190bfe5f9"
+  },
+  "frozen_at_utc": "2026-10-13T03:14:34.589493+00:00",
+  "test_labels_decoded_in_this_run": false
+}

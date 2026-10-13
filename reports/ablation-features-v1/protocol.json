@@ -1,0 +1,118 @@
+{
+  "attribution": "leave-one-group-out effects are conditional and non-additive; not causal/Shapley decomposition",
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 20261013,
+  "comparison_direction": "full minus ablated; positive means removal hurts",
+  "data_fingerprints": {
+    "catalog.jsonl": "0d1647f4b4038b834154dee8ffff724e6f7c1c0613b442f1b033ba030664b67c",
+    "manifest.json": "2673b8bc76d141782ee36fd06802eb5ede8f6be9ec184a4f5b6f072e6763a95b",
+    "test.jsonl": "af6291ab92eb676c09901c3d5f9275f080c853c77cc207058cefed717059fb1a",
+    "train.jsonl": "165bc4490dc529736d209e177fb9fb5925b0b78a34f165c5a689a83252eabb58",
+    "val.jsonl": "feafe61d8fbb2bcc9fea67a277fefd7151f64e4507132bd19c75e105f7fc4946"
+  },
+  "dataset": "amazon-science/esci-data",
+  "feature_names": [
+    "title_bm25",
+    "title_token_coverage",
+    "description_token_coverage",
+    "char_trigram_similarity",
+    "brand_match",
+    "brand_conflict",
+    "number_match",
+    "number_conflict",
+    "bigram_match",
+    "phrase_match",
+    "negation_conflict",
+    "negation_satisfied"
+  ],
+  "groups": {
+    "brand": [
+      4,
+      5
+    ],
+    "char_trigram": [
+      3
+    ],
+    "coverage": [
+      1,
+      2
+    ],
+    "negation": [
+      10,
+      11
+    ],
+    "number": [
+      6,
+      7
+    ],
+    "phrase": [
+      8,
+      9
+    ],
+    "title_bm25": [
+      0
+    ]
+  },
+  "multiplicity": "seven group comparisons per diagnostic and several metrics; all CIs exploratory, unadjusted",
+  "protocol": "retrospective_feature_ablation_v1",
+  "reference_fingerprints": {
+    "model.json": "8e5e3870c24a88432ab0f8f62f020cb7480510b8762df4dcd46615c21034f21a",
+    "products.sqlite": "428dcc2f11ccfce695a5865cbea3c64b9bb39e0491f60953e65fa2d047d60d87",
+    "report.json": "7e77110d852c2f9a5ae3aaf9fda7992e6bbc7e51c307066fa1fac838c3be7eae"
+  },
+  "reference_tolerance": 1e-10,
+  "registered_at_utc": "2026-10-13T03:01:05.583754+00:00",
+  "retrieval_pool": 100,
+  "schema_version": 1,
+  "selection_policy": "all variants reported; no test-dependent selection or retuning",
+  "semantics": "mask feature columns only; shared tokenization, negation parsing and query planning remain unchanged",
+  "source_fingerprints": {
+    "ecom_search/cli.py": "1a362679dc05aab2b0b2ac623755ec2f7e6e85311ac4c5f507380832512ae3ee",
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/ablate_features.py": "ea89ffbb57b7adfe7e16080b3605dd2392c36e3212efcb22acc0b68573fbd436",
+    "scripts/benchmark_public.py": "b364c461cbce6971a6f5343c74b162aa6128ebf65d36b6ef0c230cd8d5f8d72e",
+    "scripts/prepare_public_esci.py": "2b514e7309625203a823d3f4240157b1770cb8d338aa314651f2903addc18153"
+  },
+  "study_type": "retrospective diagnostic; test was reported before this protocol",
+  "synthetic": false,
+  "test_labels_decoded_in_this_run": false,
+  "training": {
+    "epochs": 30,
+    "l2": 0.001,
+    "learning_rate": 0.05,
+    "seed": 42
+  },
+  "variants": {
+    "full": [],
+    "without_brand": [
+      4,
+      5
+    ],
+    "without_char_trigram": [
+      3
+    ],
+    "without_coverage": [
+      1,
+      2
+    ],
+    "without_negation": [
+      10,
+      11
+    ],
+    "without_number": [
+      6,
+      7
+    ],
+    "without_phrase": [
+      8,
+      9
+    ],
+    "without_title_bm25": [
+      0
+    ]
+  }
+}

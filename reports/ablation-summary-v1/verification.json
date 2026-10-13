@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-13",
+  "scope": "Local public source distribution, Windows Python 3.10.21 CPU",
+  "stdlib": {
+    "tests": 131,
+    "passed": 98,
+    "skipped": 33,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 13.307
+  },
+  "available_cpu_dependencies": {
+    "tests": 131,
+    "passed": 129,
+    "skipped": 2,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 60.959
+  },
+  "new_ablation_tests": {
+    "features": 8,
+    "neural": 5,
+    "retrieval": 6
+  },
+  "remaining_skip_reason": "FAISS unavailable in selected interpreter; standard-library run additionally skips optional numpy/torch/pyarrow cases",
+  "tested_algorithm_sources": "Unchanged after successful complete test suite; verified against all three frozen protocols",
+  "studies": {
+    "features": {
+      "report_sha256": "1dc9ed0fd9e33fc80b8eb400d0cdfde64da47b942bf08c29c74683e96b264dbf",
+      "protocol_sha256": "a1bb4ef42f579a95fa8e5aac5317ce40439c20199115dd4d20b64d55de630d25",
+      "bound_source_files_checked": 9
+    },
+    "neural": {
+      "report_sha256": "ba47bbb3e9eb41015d89a3e9591dff80b6037d840f1994ee0e292147b80ae842",
+      "protocol_sha256": "3154cc241d18a2b521bb9bbb80ac5425590afbc07c92da656a266cf42b792911",
+      "bound_source_files_checked": 9
+    },
+    "retrieval": {
+      "report_sha256": "97cd5e3a15c696539016bcd4da490f2972bd21179852c030224d7e28ded7f859",
+      "protocol_sha256": "6acd23d1254abb693221b89a3e9ff2b212a0dec8f2333a58c1afd07acb7c3f7e",
+      "bound_source_files_checked": 7
+    }
+  },
+  "previously_published_files_unchanged_except_readme": 99,
+  "feature_run_recovery": "Attempt1 interrupted during training with no saved model or test evaluation. It was preserved. Attempt2 reran all8 fits under identical frozen code/data/parameters in a new directory; see attempts.json.",
+  "document_recovery": "Two interrupted documentation writes were restored; independent checks confirmed frozen source/data/report hashes unchanged.",
+  "publication_exclusions": "No data, pretrained or fitted weights, indexes, feature caches, per-query judgments, candidate lists or personal files.",
+  "remote_ci": "Local results do not claim remote CI success; inspect GitHub Actions for the published commit.",
+  "new_script_test_hashes": {
+    "scripts/ablate_features.py": "ea89ffbb57b7adfe7e16080b3605dd2392c36e3212efcb22acc0b68573fbd436",
+    "scripts/ablate_neural.py": "9b7517ab11a313706d9cbd7346c0b738e8df1b2edb0331c35914974637ca052e",
+    "scripts/ablate_retrieval.py": "716436551931aaaa54b68e93b1c46298d27e8a1680a9f22afc84472b58fd8abc",
+    "scripts/plot_ablations.py": "cb1dedf77c769adabce685096732e3e41d39e3c25882462a4e721bb0c92ae9ff",
+    "scripts/summarize_ablations.py": "93842b1dc9645292ec3508c40a14efd5cefaee3545db1967836dfad2b3c97ae5",
+    "tests/test_feature_ablation.py": "d98bf5b328ef50b287e374a258c4926c078113ae3eba09d9dc40cbdb9cb773ef",
+    "tests/test_neural_ablation.py": "aa927a0d093800825b2f5594aa764410e704350a49c0efa823156a35974a9aa6",
+    "tests/test_retrieval_ablation.py": "729ba4e8dc2bac8a5703440a4eaef8b88a32c325d86e17d3773ccdabd759a654"
+  }
+}

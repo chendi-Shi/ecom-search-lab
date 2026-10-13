@@ -1,0 +1,383 @@
+{
+  "bootstrap": {
+    "familywise_alpha": 0.05,
+    "method": "paired percentile bootstrap; Bonferroni interval for the prespecified NDCG contrast family",
+    "ndcg_family_tests": 13,
+    "resamples": 50000,
+    "seed": 20261010,
+    "unit": "query"
+  },
+  "candidate_policy": "Every original judged candidate, identical order and pools across variants",
+  "contrasts": {
+    "add_ce_to_lexical": [
+      "without_pool_stats",
+      "without_ce_all"
+    ],
+    "drop_bm25": [
+      "full15",
+      "without_bm25"
+    ],
+    "drop_brand": [
+      "full15",
+      "without_brand"
+    ],
+    "drop_ce_all": [
+      "full15",
+      "without_ce_all"
+    ],
+    "drop_ce_raw": [
+      "full15",
+      "without_ce_raw"
+    ],
+    "drop_char_trigram": [
+      "full15",
+      "without_char_trigram"
+    ],
+    "drop_coverage": [
+      "full15",
+      "without_coverage"
+    ],
+    "drop_negation": [
+      "full15",
+      "without_negation"
+    ],
+    "drop_number": [
+      "full15",
+      "without_number"
+    ],
+    "drop_percentile": [
+      "full15",
+      "without_percentile"
+    ],
+    "drop_phrase_bigram": [
+      "full15",
+      "without_phrase_bigram"
+    ],
+    "drop_pool_stats": [
+      "full15",
+      "without_pool_stats"
+    ],
+    "drop_zscore": [
+      "full15",
+      "without_zscore"
+    ]
+  },
+  "data_files": {
+    "catalog.jsonl": "65a45b6018af4c94106052ccd765c05f01c7e058a1feff27068a2c42478f7003",
+    "test.jsonl": "4aca97c3c121a0755e115c3b60824a9b6f9edc9b639438a2155610ad18e4d4ba",
+    "train.jsonl": "e116bdc01c556a6b16b8eca61778823a1c8c8de737d83fe490f9cfe52ac5aa7e",
+    "val.jsonl": "0cf014cd9804405171c73f6ffe198b3f5d6e8f63aa64db3e63cd18ff28b0dc7c"
+  },
+  "encoder_fingerprint": "46d1f1d10ec601048ef1bda6db36bffef3d815fed2830c6d93aa89961e4b748c",
+  "feature_cache_files": {
+    "features-test.json": "9788bf55d0e3c302c396a85cfe120a92b850ab750fcf8496edb574f0b48ed214",
+    "features-test.npy": "fa4fe1332bd5a532681c542d2425a152a044b709e7a0e457bd1190a762c753f3",
+    "features-train.json": "6cc116b6c9ee6d2bf3f9434952fc6afffad14749e9d784689db4eefc536a39b4",
+    "features-train.npy": "d5823e99d6235c314d4aff52e0cbe791b15cdcaef54c7070d22ec02bc98aff78",
+    "features-val.json": "63c2e9ab0d4355c5e2b31727aa9f30b63c78a78486b7b15efa19292e0214929c",
+    "features-val.npy": "6e35fee6dc88a5d71390173df6c1b02e6dace50fa9644e6df4fc4609f2e2822b"
+  },
+  "frozen_at": "2026-10-13T02:25:40.012224+00:00",
+  "groups": {
+    "bm25": [
+      0
+    ],
+    "brand": [
+      4,
+      5
+    ],
+    "ce_all": [
+      12,
+      13,
+      14
+    ],
+    "ce_raw": [
+      12
+    ],
+    "char_trigram": [
+      3
+    ],
+    "coverage": [
+      1,
+      2
+    ],
+    "negation": [
+      10,
+      11
+    ],
+    "number": [
+      6,
+      7
+    ],
+    "percentile": [
+      13
+    ],
+    "phrase_bigram": [
+      8,
+      9
+    ],
+    "pool_stats": [
+      13,
+      14
+    ],
+    "zscore": [
+      14
+    ]
+  },
+  "historical_model_sha256": "142564a12f6e388122d26380bad244a965a760c7a591479851fefbddd0859f5f",
+  "historical_protocol_sha256": "0941c24be153b48afc57b7d871a78ab7f0a27615da93098b93a4c10701a446d8",
+  "historical_report_sha256": "2784d94ec7a9b982c2a78a7f7f1f1ab96c431fb8ccd663ddbc8ae9558658a4e6",
+  "historical_selection_sha256": "a0059e2b5343e4cbb41e7494c133ebf2608cd5042c38ac22f3e1e8407c75fd88",
+  "iterations": 200,
+  "lightgbm_version": "4.7.0",
+  "metrics": [
+    "ndcg10",
+    "precision10",
+    "exact_at1",
+    "recall10"
+  ],
+  "new_model_selection": false,
+  "params": {
+    "deterministic": true,
+    "feature_pre_filter": false,
+    "force_col_wise": true,
+    "label_gain": [
+      0,
+      1,
+      3,
+      7
+    ],
+    "lambda_l2": 1,
+    "learning_rate": 0.05,
+    "metric": "ndcg",
+    "min_data_in_leaf": 40,
+    "ndcg_eval_at": [
+      10
+    ],
+    "num_leaves": 7,
+    "num_threads": 2,
+    "objective": "lambdarank",
+    "seed": 20261010,
+    "verbosity": -1
+  },
+  "schema_version": 1,
+  "source_files": {
+    "ecom_search/accuracy.py": "bdc62c5e03b75a75ee9399ab351ecbef48d7bc9c9100c1473cbefebdb08ae470",
+    "ecom_search/cross_encoder.py": "bf6f1f6765c1e65119b132e6482d02dc19f43cadf61a37788712a1a60af28ad5",
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/ablate_neural.py": "9b7517ab11a313706d9cbd7346c0b738e8df1b2edb0331c35914974637ca052e",
+    "scripts/train_accuracy.py": "371e215d7b4f1548638a05eed40f8f2f1a618f938c68e39114e042730af35719"
+  },
+  "status": "retrospective_diagnostic",
+  "test_previously_seen": true,
+  "tie_policy": "score descending, product ID ascending",
+  "train_queries": 500,
+  "train_selection": "SHA256([20261010, accuracy_train, query_id]) ascending",
+  "variants": {
+    "full15": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_bm25": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_brand": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_ce_all": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "without_ce_raw": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "without_char_trigram": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_coverage": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_negation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14
+    ],
+    "without_number": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_percentile": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14
+    ],
+    "without_phrase_bigram": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "without_pool_stats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "without_zscore": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "completed_attempt": 2,
+  "completed_protocol_sha256": "a1bb4ef42f579a95fa8e5aac5317ce40439c20199115dd4d20b64d55de630d25",
+  "completed_run": "outputs/ablation-features-v2",
+  "first_attempt": {
+    "completed_models_or_report_written": false,
+    "last_observed_progress": "5 of 8 fits logged; unsaved in-memory fits were not recovered",
+    "preservation": "original protocol, training marker and feature cache kept unchanged locally",
+    "protocol_sha256": "55c16bb0ec4fe0ed0ed21da6110cd0e83dfd1a577f94d78ca96c6fadb9af1924",
+    "run": "outputs/ablation-features-v1",
+    "status": "interrupted during training; process no longer existed when resumed",
+    "test_evaluation_started": false
+  },
+  "nonpublished_artifacts": {
+    "models.json": {
+      "reason": "model weights retained only in local completed output; omitted from source publication",
+      "sha256": "7203af6d33dd6a04c4db1bf94a3790b07c9125d8ddd95d89420ad73cfbd268ec"
+    }
+  },
+  "published_files_sha256": {
+    "models_frozen.json": "aa9f710c97b0738ab635ca7708e6d3a90f66661fba0389f3f5b9c1163b730fc6",
+    "protocol.json": "a1bb4ef42f579a95fa8e5aac5317ce40439c20199115dd4d20b64d55de630d25",
+    "report.json": "1dc9ed0fd9e33fc80b8eb400d0cdfde64da47b942bf08c29c74683e96b264dbf",
+    "report.md": "7478433f6d3c9a8d9ca6fb13e8a3353ec6a4e4f43ab3762aee5f799ed8ba48e6",
+    "training.json": "3f42a8dd69e1fdad539d401b7936b04484a11127a331469dbc0ff40190bfe5f9"
+  },
+  "rerun_policy": "fresh output directory; identical frozen source, data, reference, variants and hyperparameters; all 8 fits rerun",
+  "study": "retrospective_feature_ablation_v1"
+}

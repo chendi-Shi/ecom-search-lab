@@ -1,0 +1,194 @@
+{
+  "activity": {
+    "features": {
+      "bigram_match": {
+        "nonzero_pairs": 11291,
+        "nonzero_queries": 722,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 719
+      },
+      "brand_conflict": {
+        "nonzero_pairs": 15693,
+        "nonzero_queries": 490,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 234
+      },
+      "brand_match": {
+        "nonzero_pairs": 3359,
+        "nonzero_queries": 203,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 188
+      },
+      "char_trigram_similarity": {
+        "nonzero_pairs": 37700,
+        "nonzero_queries": 999,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 999
+      },
+      "description_token_coverage": {
+        "nonzero_pairs": 0,
+        "nonzero_queries": 0,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 0
+      },
+      "negation_conflict": {
+        "nonzero_pairs": 3198,
+        "nonzero_queries": 221,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 219
+      },
+      "negation_satisfied": {
+        "nonzero_pairs": 1051,
+        "nonzero_queries": 123,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 123
+      },
+      "number_conflict": {
+        "nonzero_pairs": 3132,
+        "nonzero_queries": 176,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 176
+      },
+      "number_match": {
+        "nonzero_pairs": 2316,
+        "nonzero_queries": 159,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 159
+      },
+      "phrase_match": {
+        "nonzero_pairs": 3232,
+        "nonzero_queries": 293,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 292
+      },
+      "title_bm25": {
+        "nonzero_pairs": 30127,
+        "nonzero_queries": 972,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 972
+      },
+      "title_token_coverage": {
+        "nonzero_pairs": 30127,
+        "nonzero_queries": 972,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 962
+      }
+    },
+    "groups": {
+      "brand": {
+        "nonzero_pairs": 19052,
+        "nonzero_queries": 505,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 234
+      },
+      "char_trigram": {
+        "nonzero_pairs": 37700,
+        "nonzero_queries": 999,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 999
+      },
+      "coverage": {
+        "nonzero_pairs": 30127,
+        "nonzero_queries": 972,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 962
+      },
+      "negation": {
+        "nonzero_pairs": 4091,
+        "nonzero_queries": 236,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 234
+      },
+      "number": {
+        "nonzero_pairs": 5083,
+        "nonzero_queries": 177,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 177
+      },
+      "phrase": {
+        "nonzero_pairs": 12463,
+        "nonzero_queries": 778,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 775
+      },
+      "title_bm25": {
+        "nonzero_pairs": 30127,
+        "nonzero_queries": 972,
+        "pairs": 38239,
+        "queries": 1000,
+        "varying_queries": 972
+      }
+    }
+  },
+  "cache_pairs": 38239,
+  "cache_seconds": 162.15220450000004,
+  "cost": {
+    "full": {
+      "fit_seconds": 111.60653959999996,
+      "pairs": 98551
+    },
+    "without_brand": {
+      "fit_seconds": 44.74893559999998,
+      "pairs": 98551
+    },
+    "without_char_trigram": {
+      "fit_seconds": 68.36501910000004,
+      "pairs": 98551
+    },
+    "without_coverage": {
+      "fit_seconds": 136.74839800000007,
+      "pairs": 98551
+    },
+    "without_negation": {
+      "fit_seconds": 46.48977799999989,
+      "pairs": 98551
+    },
+    "without_number": {
+      "fit_seconds": 46.55292339999994,
+      "pairs": 98551
+    },
+    "without_phrase": {
+      "fit_seconds": 48.02018779999992,
+      "pairs": 98551
+    },
+    "without_title_bm25": {
+      "fit_seconds": 120.74742290000006,
+      "pairs": 98551
+    }
+  },
+  "cost_protocol": "serial CPU process, one shared extraction pass; fit excludes shared extraction; OS load uncontrolled",
+  "python": "3.10.21",
+  "reproduction": {
+    "passed": true,
+    "prediction_pairs": 38239,
+    "tolerance": 1e-10,
+    "train_score_max_abs_difference": 8.881784197001252e-16,
+    "weight_max_abs_difference": 2.220446049250313e-16
+  },
+  "system": "Windows",
+  "total_seconds": 808.7233200000001,
+  "training": {
+    "epochs": 30,
+    "l2": 0.001,
+    "learning_rate": 0.05,
+    "seed": 42
+  }
+}

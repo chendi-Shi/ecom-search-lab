@@ -1,0 +1,86 @@
+{
+  "artifact_fingerprints": {
+    "title_only.sqlite": "23cf53032c21bf2f85ec06a0df360ad659d559d500f9b46a4062bf35e5c6058b"
+  },
+  "created_at_utc": "2026-10-13T02:27:16.154905+00:00",
+  "data_fingerprints": {
+    "catalog.jsonl": "0d1647f4b4038b834154dee8ffff724e6f7c1c0613b442f1b033ba030664b67c",
+    "manifest.json": "2673b8bc76d141782ee36fd06802eb5ede8f6be9ec184a4f5b6f072e6763a95b",
+    "test.jsonl": "af6291ab92eb676c09901c3d5f9275f080c853c77cc207058cefed717059fb1a",
+    "train.jsonl": "165bc4490dc529736d209e177fb9fb5925b0b78a34f165c5a689a83252eabb58",
+    "val.jsonl": "feafe61d8fbb2bcc9fea67a277fefd7151f64e4507132bd19c75e105f7fc4946"
+  },
+  "dataset": "amazon-science/esci-data",
+  "difference_direction": "full_k100 minus ablated",
+  "limits": [
+    "Different retrieval pools; separate from identical-pool ranker ablations",
+    "Removing brand rebuilds field TF/DF/document-length statistics, not only a BM25 weight",
+    "Disabling exclusion removes its 3x oversampling-and-filtering module",
+    "Raw-token mode bundles stopword/negation/minus processing; tokenizer unchanged",
+    "Recall@100 for pool50 is capped at 50 returned items; candidate recall uses entire pool",
+    "Intervals are exploratory pointwise query-bootstrap; no multiple-comparison correction or training-seed variance",
+    "Known-positive recall on finite judged-product union; unjudged pairs unknown"
+  ],
+  "parameters": {
+    "application_result_cache": false,
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 20261010,
+    "method_order": "cyclic rotation by query index",
+    "model": "unchanged validation-selected reference pairwise",
+    "query_feature_cache": "cleared before each timed variant"
+  },
+  "planned_subset": "Queries with exclusions under the full parser; full vs no-exclusion only, exploratory",
+  "protocol": "retrieval_ablation_v1",
+  "reference": "full_k100",
+  "reference_fingerprints": {
+    "freeze.json": "1ba0ab62719b6083e5b69cf31d73e049cb4f95f343e5dedbe29fb9d1e58eb0e2",
+    "model.json": "8e5e3870c24a88432ab0f8f62f020cb7480510b8762df4dcd46615c21034f21a",
+    "per_query_test.jsonl": "eb50b22e9a7edc8ffa23942922c7062f18efede828681fcfd893f5c34cea3720",
+    "products.sqlite": "428dcc2f11ccfce695a5865cbea3c64b9bb39e0491f60953e65fa2d047d60d87",
+    "report.json": "7e77110d852c2f9a5ae3aaf9fda7992e6bbc7e51c307066fa1fac838c3be7eae"
+  },
+  "source_fingerprints": {
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/ablate_retrieval.py": "716436551931aaaa54b68e93b1c46298d27e8a1680a9f22afc84472b58fd8abc",
+    "scripts/benchmark_public.py": "b364c461cbce6971a6f5343c74b162aa6128ebf65d36b6ef0c230cd8d5f8d72e"
+  },
+  "study_type": "retrospective diagnostic on previously reported test; no hyperparameter selection",
+  "synthetic": false,
+  "test_labels_parsed_in_preparation": false,
+  "variants": {
+    "full_k100": {
+      "index": "original",
+      "planner": "full",
+      "pool": 100
+    },
+    "full_k200": {
+      "index": "original",
+      "planner": "full",
+      "pool": 200
+    },
+    "full_k50": {
+      "index": "original",
+      "planner": "full",
+      "pool": 50
+    },
+    "no_brand_index_k100": {
+      "index": "title_only",
+      "planner": "full",
+      "pool": 100
+    },
+    "no_exclusion_filter_k100": {
+      "index": "original",
+      "planner": "no_exclusion",
+      "pool": 100
+    },
+    "raw_tokens_k100": {
+      "index": "original",
+      "planner": "raw",
+      "pool": 100
+    }
+  }
+}

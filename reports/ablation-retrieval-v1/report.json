@@ -1,0 +1,1039 @@
+{
+  "activity": {
+    "nonempty_description_products": 0,
+    "queries_with_exclusion": 28
+  },
+  "baseline_reproduction": {
+    "exact_historical_rankings_checked": true,
+    "metrics_tolerance": 1e-12,
+    "queries": 100
+  },
+  "catalog_products": 43222,
+  "created_at_utc": "2026-10-13T02:29:29.634228+00:00",
+  "data_fingerprints": {
+    "catalog.jsonl": "0d1647f4b4038b834154dee8ffff724e6f7c1c0613b442f1b033ba030664b67c",
+    "manifest.json": "2673b8bc76d141782ee36fd06802eb5ede8f6be9ec184a4f5b6f072e6763a95b",
+    "test.jsonl": "af6291ab92eb676c09901c3d5f9275f080c853c77cc207058cefed717059fb1a",
+    "train.jsonl": "165bc4490dc529736d209e177fb9fb5925b0b78a34f165c5a689a83252eabb58",
+    "val.jsonl": "feafe61d8fbb2bcc9fea67a277fefd7151f64e4507132bd19c75e105f7fc4946"
+  },
+  "default_model_changed": false,
+  "elapsed_seconds": 122.91465270001208,
+  "exclusion_subset": {
+    "full_minus_no_exclusion": {
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.25656341007569294,
+            -0.06357964267973666
+          ],
+          "delta": -0.15461612780364117,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.028571428571428574,
+            0.0
+          ],
+          "delta": -0.010714285714285716,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.007832080200501254,
+            0.0
+          ],
+          "delta": -0.0029239766081871348,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.25656341007569294,
+            -0.06357964267973666
+          ],
+          "delta": -0.15461612780364117,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.25656341007569294,
+            -0.06357964267973666
+          ],
+          "delta": -0.15461612780364117,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.2285714285714286,
+            -0.05714285714285715
+          ],
+          "delta": -0.1392857142857143,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.05481945387132597,
+            -0.0038807665424044732
+          ],
+          "delta": -0.026752243509325497,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.25656341007569294,
+            -0.06357964267973666
+          ],
+          "delta": -0.15461612780364117,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 28,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      }
+    },
+    "queries": 28
+  },
+  "full_minus_variant": {
+    "full_k200": {
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.07585142101022886,
+            -0.0432222389218891
+          ],
+          "delta": -0.05848037518391011,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.005999999999999998,
+            0.005
+          ],
+          "delta": -0.0009999999999999992,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.0017444381598793362,
+            0.006
+          ],
+          "delta": 0.00113697209653092,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.011108668193447168,
+            0.025850502308533075
+          ],
+          "delta": 0.007780405575498377,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.07585142101022886,
+            -0.0432222389218891
+          ],
+          "delta": -0.05848037518391011,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "delta": 0.0,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "delta": 0.0,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "delta": 0.0,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      }
+    },
+    "full_k50": {
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            0.06465331126558384,
+            0.10748810362291225
+          ],
+          "delta": 0.08553600325428672,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.008000000000000002,
+            0.017
+          ],
+          "delta": 0.004,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.003869079907357266,
+            0.003945841821380252
+          ],
+          "delta": -0.00013431114921389487,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            0.06465331126558384,
+            0.10748810362291225
+          ],
+          "delta": 0.08553600325428672,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            0.06465331126558384,
+            0.10748810362291225
+          ],
+          "delta": 0.08553600325428672,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "delta": 0.0,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "delta": 0.0,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            0.06465331126558384,
+            0.10748810362291225
+          ],
+          "delta": 0.08553600325428672,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      }
+    },
+    "no_brand_index_k100": {
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.001446384398321272,
+            0.00815573408932043
+          ],
+          "delta": 0.0033708741956775612,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.002999999999999999,
+            0.0
+          ],
+          "delta": -0.0009999999999999998,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.004000000000000001,
+            0.0
+          ],
+          "delta": -0.0013125000000000003,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.001446384398321272,
+            0.00815573408932043
+          ],
+          "delta": 0.0033708741956775612,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.001446384398321272,
+            0.00815573408932043
+          ],
+          "delta": 0.0033708741956775612,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.006000000000000001,
+            0.006999999999999999
+          ],
+          "delta": 0.0,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.0019525280921498444,
+            0.002841897879788241
+          ],
+          "delta": 0.000433720199590438,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.001446384398321272,
+            0.00815573408932043
+          ],
+          "delta": 0.0033708741956775612,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      }
+    },
+    "no_exclusion_filter_k100": {
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.07835406886048507,
+            -0.017347836040770823
+          ],
+          "delta": -0.04329251578501953,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.008,
+            0.0
+          ],
+          "delta": -0.0030000000000000005,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.002192982456140351,
+            0.0
+          ],
+          "delta": -0.0008187134502923978,
+          "interval_excludes_zero": false,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.07835406886048507,
+            -0.017347836040770823
+          ],
+          "delta": -0.04329251578501953,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.07835406886048507,
+            -0.017347836040770823
+          ],
+          "delta": -0.04329251578501953,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.07,
+            -0.015
+          ],
+          "delta": -0.03900000000000001,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.016388149016788645,
+            -0.0011630996096740197
+          ],
+          "delta": -0.007490628182611139,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.07835406886048507,
+            -0.017347836040770823
+          ],
+          "delta": -0.04329251578501953,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      }
+    },
+    "raw_tokens_k100": {
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.09365316668097998,
+            -0.021250666545716942
+          ],
+          "delta": -0.053536376731895645,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.023,
+            -0.0010000000000000002
+          ],
+          "delta": -0.01,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.00616231377841285,
+            -0.0004166666666666667
+          ],
+          "delta": -0.0028115490460691706,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.09365316668097998,
+            -0.021250666545716942
+          ],
+          "delta": -0.053536376731895645,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "ci95": [
+            -0.09365316668097998,
+            -0.021250666545716942
+          ],
+          "delta": -0.053536376731895645,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "judged_fraction@10": {
+          "ci95": [
+            -0.106,
+            -0.022000000000000002
+          ],
+          "delta": -0.06,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@10": {
+          "ci95": [
+            -0.026247672433519168,
+            -0.0033558554877204765
+          ],
+          "delta": -0.013496206644609831,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        },
+        "known_positive_recall@100": {
+          "ci95": [
+            -0.09365316668097998,
+            -0.021250666545716942
+          ],
+          "delta": -0.053536376731895645,
+          "interval_excludes_zero": true,
+          "method": "paired query bootstrap percentile; exploratory; no multiple-comparison correction",
+          "queries": 100,
+          "samples": 2000,
+          "seed": 20261010
+        }
+      }
+    }
+  },
+  "latency_scope": "descriptive timings on a loaded machine; retrieval measures FTS SQL plus constraint filtering, excludes query planning; model/catalog resident, application result cache disabled, query feature cache cleared per variant; OS caches uncontrolled; cyclic method order; no speedup claim",
+  "limits": [
+    "Different retrieval pools; separate from identical-pool ranker ablations",
+    "Removing brand rebuilds field TF/DF/document-length statistics, not only a BM25 weight",
+    "Disabling exclusion removes its 3x oversampling-and-filtering module",
+    "Raw-token mode bundles stopword/negation/minus processing; tokenizer unchanged",
+    "Recall@100 for pool50 is capped at 50 returned items; candidate recall uses entire pool",
+    "Intervals are exploratory pointwise query-bootstrap; no multiple-comparison correction or training-seed variance",
+    "Known-positive recall on finite judged-product union; unjudged pairs unknown"
+  ],
+  "methods": {
+    "full_k100": {
+      "candidate_count": {
+        "mean": 89.55,
+        "queries": 100
+      },
+      "changed_retrieval_order_queries": 0,
+      "latency": {
+        "retrieval": {
+          "mean_ms": 27.09293199935928,
+          "p50_ms": 16.510700050275773,
+          "p95_ms": 85.5038000154309,
+          "queries": 100
+        },
+        "retrieval_and_rerank": {
+          "mean_ms": 158.81796099769417,
+          "p50_ms": 136.75449998117983,
+          "p95_ms": 302.37989994930103,
+          "queries": 100
+        }
+      },
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "mean": 0.572473905168919,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.621,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.1907025408356722,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.572473905168919,
+          "queries": 100
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "mean": 0.572473905168919,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.642,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19352999531956058,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.572473905168919,
+          "queries": 100
+        }
+      }
+    },
+    "full_k200": {
+      "candidate_count": {
+        "mean": 168.55,
+        "queries": 100
+      },
+      "changed_retrieval_order_queries": 84,
+      "latency": {
+        "retrieval": {
+          "mean_ms": 30.945438002236187,
+          "p50_ms": 15.849200019147247,
+          "p95_ms": 107.88229998433962,
+          "queries": 100
+        },
+        "retrieval_and_rerank": {
+          "mean_ms": 179.32984699960798,
+          "p50_ms": 159.35629996238276,
+          "p95_ms": 344.77270004572347,
+          "queries": 100
+        }
+      },
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "mean": 0.6309542803528292,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.622,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.18956556873914132,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.5646934995934206,
+          "queries": 100
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "mean": 0.6309542803528292,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.642,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19352999531956058,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.572473905168919,
+          "queries": 100
+        }
+      }
+    },
+    "full_k50": {
+      "candidate_count": {
+        "mean": 46.82,
+        "queries": 100
+      },
+      "changed_retrieval_order_queries": 88,
+      "latency": {
+        "retrieval": {
+          "mean_ms": 19.606949998415075,
+          "p50_ms": 11.49269996676594,
+          "p95_ms": 60.69050001678988,
+          "queries": 100
+        },
+        "retrieval_and_rerank": {
+          "mean_ms": 142.4943759990856,
+          "p50_ms": 123.43950005015358,
+          "p95_ms": 257.8471999731846,
+          "queries": 100
+        }
+      },
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "mean": 0.48693790191463227,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.617,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19083685198488612,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.48693790191463227,
+          "queries": 100
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "mean": 0.48693790191463227,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.642,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19352999531956058,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.48693790191463227,
+          "queries": 100
+        }
+      }
+    },
+    "no_brand_index_k100": {
+      "candidate_count": {
+        "mean": 89.48,
+        "queries": 100
+      },
+      "changed_retrieval_order_queries": 94,
+      "latency": {
+        "retrieval": {
+          "mean_ms": 32.93836199794896,
+          "p50_ms": 18.74530001077801,
+          "p95_ms": 119.41580002894625,
+          "queries": 100
+        },
+        "retrieval_and_rerank": {
+          "mean_ms": 170.50530999607872,
+          "p50_ms": 149.67539999634027,
+          "p95_ms": 336.7290000314824,
+          "queries": 100
+        }
+      },
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "mean": 0.5691030309732414,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.622,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19201504083567222,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.5691030309732414,
+          "queries": 100
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "mean": 0.5691030309732414,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.642,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19309627511997016,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.5691030309732414,
+          "queries": 100
+        }
+      }
+    },
+    "no_exclusion_filter_k100": {
+      "candidate_count": {
+        "mean": 90.19,
+        "queries": 100
+      },
+      "changed_retrieval_order_queries": 21,
+      "latency": {
+        "retrieval": {
+          "mean_ms": 19.951330000767484,
+          "p50_ms": 8.806099998764694,
+          "p95_ms": 77.82700000097975,
+          "queries": 100
+        },
+        "retrieval_and_rerank": {
+          "mean_ms": 153.11401999904774,
+          "p50_ms": 133.90309998067096,
+          "p95_ms": 310.03819999750704,
+          "queries": 100
+        }
+      },
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "mean": 0.6157664209539386,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.624,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.19152125428596464,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.6157664209539386,
+          "queries": 100
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "mean": 0.6157664209539386,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.6809999999999999,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.2010206235021717,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.6157664209539386,
+          "queries": 100
+        }
+      }
+    },
+    "raw_tokens_k100": {
+      "candidate_count": {
+        "mean": 91.85,
+        "queries": 100
+      },
+      "changed_retrieval_order_queries": 39,
+      "latency": {
+        "retrieval": {
+          "mean_ms": 33.79665900254622,
+          "p50_ms": 13.08549998793751,
+          "p95_ms": 115.02580001251772,
+          "queries": 100
+        },
+        "retrieval_and_rerank": {
+          "mean_ms": 165.16660000372212,
+          "p50_ms": 132.41850002668798,
+          "p95_ms": 319.88949998049065,
+          "queries": 100
+        }
+      },
+      "reranked": {
+        "candidate_known_positive_recall": {
+          "mean": 0.6260102819008146,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.631,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.1935140898817414,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.6260102819008146,
+          "queries": 100
+        }
+      },
+      "retrieval": {
+        "candidate_known_positive_recall": {
+          "mean": 0.6260102819008146,
+          "queries": 100
+        },
+        "judged_fraction@10": {
+          "mean": 0.7020000000000001,
+          "queries": 100
+        },
+        "known_positive_recall@10": {
+          "mean": 0.2070262019641704,
+          "queries": 100
+        },
+        "known_positive_recall@100": {
+          "mean": 0.6260102819008146,
+          "queries": 100
+        }
+      }
+    }
+  },
+  "model_sha256": "8e5e3870c24a88432ab0f8f62f020cb7480510b8762df4dcd46615c21034f21a",
+  "protocol": "retrieval_ablation_v1",
+  "protocol_sha256": "6acd23d1254abb693221b89a3e9ff2b212a0dec8f2333a58c1afd07acb7c3f7e",
+  "source_fingerprints": {
+    "ecom_search/data.py": "324189ae84791f5424859c852e5b3656ac548932b1f0c9b69ccb475435454c34",
+    "ecom_search/evaluate.py": "f8adf2f29eefde50269f47a4c73571fc2889ad03a8105c3dc133bff0f69e4c7a",
+    "ecom_search/index.py": "c9a37a68f8a0498ef24ea51c12e081c6b2ab73e483a6b053437f0aa13716ca60",
+    "ecom_search/query.py": "ce5cffb7372fb467a6af6b15dff55804802454bb7e9a1c791015ca03c43674f9",
+    "ecom_search/ranking.py": "c14f4b63377dcb114768d52ff4718583cfc85a7da282c220d7c579717b48009b",
+    "scripts/ablate_retrieval.py": "716436551931aaaa54b68e93b1c46298d27e8a1680a9f22afc84472b58fd8abc",
+    "scripts/benchmark_public.py": "b364c461cbce6971a6f5343c74b162aa6128ebf65d36b6ef0c230cd8d5f8d72e"
+  },
+  "study_type": "retrospective diagnostic on previously reported test; no hyperparameter selection",
+  "test_queries": 100,
+  "variants": {
+    "full_k100": {
+      "index": "original",
+      "planner": "full",
+      "pool": 100
+    },
+    "full_k200": {
+      "index": "original",
+      "planner": "full",
+      "pool": 200
+    },
+    "full_k50": {
+      "index": "original",
+      "planner": "full",
+      "pool": 50
+    },
+    "no_brand_index_k100": {
+      "index": "title_only",
+      "planner": "full",
+      "pool": 100
+    },
+    "no_exclusion_filter_k100": {
+      "index": "original",
+      "planner": "no_exclusion",
+      "pool": 100
+    },
+    "raw_tokens_k100": {
+      "index": "original",
+      "planner": "raw",
+      "pool": 100
+    }
+  }
+}
